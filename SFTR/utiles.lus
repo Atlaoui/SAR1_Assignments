@@ -1,0 +1,57 @@
+node jafter (X : bool) returns (Y : bool);
+  let
+    Y = false -> if pre X then true else false;
+  tel
+
+node EDGE (b : bool) returns (edge : bool);
+  let
+     edge = false -> b and not pre b;
+  tel
+
+node notedge (b :  bool) returns (edge : bool);
+  let
+    edge = not EDGE(b);
+  tel
+
+node switch (orig ,on, off : bool) returns (state : bool);
+  let
+  state = orig -> if on and not (true->pre on) then true else if off and (pre state) then false else (pre state);
+  tel
+
+node once_from_to(X, A, B : bool) returns (ok : bool);
+var grabA,grabX :bool;
+  let
+    grabA=switch(A,A,B);
+    grabX=switch(X,X,B);
+    ok =false -> not (grabA and grabX) and B;
+  tel
+
+node Portillon (A, B: bool) returns (alarm: bool);
+var cond1, cond2, cond3 : bool;
+let
+
+  cond1=false ->if A and not B then true else pre cond1;
+  cond2=false -> if not A and not B then true else pre cond2;
+  cond3=false -> if not A and B then true else pre cond3;
+  alarm = false -> not if (cond1 or cond2 or cond3) then true else false;
+tel
+
+
+node on_off(TD : bool) returns (etat : bool);
+var cptTD : int;
+let
+    cptTD = if TD then cptTD+1 else
+    etat = (cptTD = 1);
+tel
+
+node SWITCH (orig : bool; on : bool; off : bool) returns (state : bool);
+let
+	state = if on then true else if off then false else (orig -> pre state);
+tel
+
+node ONCE_FROM_TO (x, a, b : bool) returns (ok2 : bool);
+var active : bool;
+let
+	active = SWITCH(false, a, b);
+	ok2 = true -> (not active) or (not x);
+tel

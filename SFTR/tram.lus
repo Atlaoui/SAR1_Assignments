@@ -1,0 +1,32 @@
+
+node metronome (reset : bool; delay : int) returns (tic, tac : bool);
+var hz, n : int; first, state : bool;
+
+let
+
+first =false ->  hz > 0;
+hz = 0-> if reset or (pre hz > 0) then delay-n else pre hz;
+n = 0 -> if (tic or tac) then pre n+1 else 0;
+state = true -> if (pre state) then false  else true;
+tic = false -> state and pre first;
+tac = false ->  not state and pre first;
+
+tel;
+
+node tramway(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool) returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
+
+--transition
+-- fermer_porte ouvrir_porte demande_porte
+
+--etat
+--porte_ouverte, porte_ferme  en_station
+
+var tic, tac : bool;
+
+let
+
+ouvrir_porte = porte_ouverte -> if en_station and demande_porte then true else pre ouvrir_porte;
+(tic, tac) = metronome(attention_depart,3); 
+fermer_porte = if(not tic and no tac) then true pre
+
+tel;
