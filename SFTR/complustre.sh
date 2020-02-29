@@ -1,3 +1,3 @@
 #!/bin/bash
-#rm *.ec
+rm *.ec
 luciole $1 $2

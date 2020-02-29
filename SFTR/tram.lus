@@ -1,3 +1,7 @@
+node switch (orig, on, off : bool) returns (state : bool);
+let
+  state = orig ->( if on then true else if off then false else  pre  state );
+tel
 
 node metronome (reset : bool; delay : int) returns (tic, tac : bool);
 var hz, n : int; first, state : bool;
@@ -14,19 +18,22 @@ tac = false ->  not state and pre first;
 tel;
 
 node tramway(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool) returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
+var tic, tac ,On_en_station: bool;
+let
+On_en_station=switch(false,en_station,(not tic and not tac));
+ouvrir_porte = porte_ouverte -> if en_station and demande_porte then true else pre ouvrir_porte;
+(tic, tac) = metronome(attention_depart,5);
+fermer_porte = not tic and not tac;
+porte_ok = demande_porte and On_en_station and (not porte_ouverte) ;
+tel;
+
+
+
+
+
 
 --transition
 -- fermer_porte ouvrir_porte demande_porte
 
 --etat
 --porte_ouverte, porte_ferme  en_station
-
-var tic, tac : bool;
-
-let
-
-ouvrir_porte = porte_ouverte -> if en_station and demande_porte then true else pre ouvrir_porte;
-(tic, tac) = metronome(attention_depart,3); 
-fermer_porte = if(not tic and no tac) then true pre
-
-tel;
