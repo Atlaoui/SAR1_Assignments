@@ -1,0 +1,20 @@
+package TME4.Interfaces;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+
+import TME4.exception.VoidResponse;
+
+public interface AppelDistant extends Service{
+	default public void execute(Socket connexion) {
+		try(ObjectOutputStream oos = new ObjectOutputStream(connexion.getOutputStream());
+				ObjectInputStream ois = new ObjectInputStream(connexion.getInputStream())){	
+			String name_func = ois.readUTF();
+			String name = ois.readUTF();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

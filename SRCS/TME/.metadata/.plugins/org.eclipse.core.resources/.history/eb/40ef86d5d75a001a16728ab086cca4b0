@@ -1,0 +1,45 @@
+package TME4;
+
+import java.net.Socket;
+import TME4.Interfaces.Calculatrice;
+import TME4.Interfaces.ClientProxy;
+
+public class CalculatriceProxy extends ClientProxy implements Calculatrice{
+
+	
+	public CalculatriceProxy(String nom, int portCalculatrice) {
+		super(nom,portCalculatrice);
+	}
+
+	
+
+	
+
+
+
+
+	@Override
+	public Integer add(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer sous(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer mult(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResDiv div(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

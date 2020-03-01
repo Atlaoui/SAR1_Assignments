@@ -1,0 +1,12 @@
+package TME4.TD;
+
+public class Tampon {
+	private Thread [] pool;
+	public Tampon(int Taille) {
+		pool = new Thread[Taille];
+	}
+	
+	public add_job(Runnable r) {
+		
+	}
+}

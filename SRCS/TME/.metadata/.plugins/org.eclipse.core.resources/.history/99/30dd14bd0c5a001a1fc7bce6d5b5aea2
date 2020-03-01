@@ -1,0 +1,11 @@
+package TME4;
+
+public interface Calculatrice {
+	
+	
+	
+	
+	class ResDiv {
+		
+	}
+}

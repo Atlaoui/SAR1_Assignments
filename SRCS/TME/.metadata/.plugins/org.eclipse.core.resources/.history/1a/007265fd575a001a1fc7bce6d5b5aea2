@@ -1,0 +1,26 @@
+package TME4.Interfaces;
+
+import java.io.Serializable;
+
+public Integererface Calculatrice extends Service {
+	
+	public Integereger add(Integer a,Integer b);
+
+	public Integereger sous(Integer a,Integer b);
+	
+	public Integereger mult(Integer a,Integer b);
+	
+	public ResDiv div(Integer a , Integer b);
+	
+	class ResDiv implements Serializable{
+		private static final long serialVersionUID = 1L;
+		private final Integer q,r;
+		
+		public ResDiv(Integer q,Integer r) {
+			this.q=q;
+			this.r=r;
+		}
+		public Integer getQuotient() {return q;}
+		public Integer getReste() {return r;}
+	}
+}

@@ -1,0 +1,5 @@
+package TME4.annotation;
+
+public @interface SansEtat {
+
+}

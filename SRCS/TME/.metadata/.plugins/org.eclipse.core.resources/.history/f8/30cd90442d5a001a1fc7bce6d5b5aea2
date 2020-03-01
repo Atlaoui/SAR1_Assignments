@@ -1,0 +1,10 @@
+package TME4.TD;
+
+public class Tampon {
+	private Thread [] pool;
+	public final TAILLE;
+	public Tampon(int Taille) {
+		
+	}
+	
+}

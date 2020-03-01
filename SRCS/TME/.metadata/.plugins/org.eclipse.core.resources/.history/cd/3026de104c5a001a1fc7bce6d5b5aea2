@@ -1,0 +1,11 @@
+package TME4;
+
+import TME4.Interfaces.Annuaire;
+
+public class AnnuaireProxy implements Annuaire{
+
+	public AnnuaireProxy(String string, int portannuaire) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

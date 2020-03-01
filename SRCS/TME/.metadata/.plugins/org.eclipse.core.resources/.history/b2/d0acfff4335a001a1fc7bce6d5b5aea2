@@ -1,0 +1,29 @@
+package TME4.Interfaces;
+
+public interface Calculatrice extends Service {
+	
+	public int add(int a,int b);
+
+	public int sous(int a,int b);
+	
+	public int mult(int a,int b);
+	
+	public ResDiv div(int a , int b);
+	
+	class ResDiv {
+		
+		
+		
+		
+		public Integer getQuotient() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		public Object getReste() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+}

@@ -1,0 +1,67 @@
+package TME4;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import TME4.Interfaces.Calculatrice;
+import TME4.exception.MyProtocolException;
+
+public class CalculatriceProxy implements Calculatrice{
+	
+	private final int port;
+	private final String nom;
+	public CalculatriceProxy(String nom, int portCalculatrice) {
+		this.nom=nom;
+		this.port=portCalculatrice;
+	}
+
+	@Override
+	public void execute(Socket connexion) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public Object invokeService(String name, Object[] params) throws MyProtocolException {
+		try(Socket service = new Socket(nom, port)){
+		for(Object o : params)
+			if(o instanceof MyProtocolException)
+				throw new MyProtocolException();
+		
+		return null;
+		} catch (IOException  e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return params;
+	}
+	
+	
+	
+
+	@Override
+	public Integer add(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer sous(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer mult(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResDiv div(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

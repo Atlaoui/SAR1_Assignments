@@ -1,0 +1,12 @@
+package TME4;
+
+import java.net.Socket;
+
+import TME4.Interfaces.Annuaire;
+import TME4.Interfaces.Service;
+
+public class AnnuaireAppelDistant implements AppelDistant{
+
+
+
+}

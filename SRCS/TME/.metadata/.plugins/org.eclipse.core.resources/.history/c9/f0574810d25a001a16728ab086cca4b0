@@ -1,0 +1,35 @@
+package TME4;
+
+
+
+import java.net.Socket;
+
+import TME4.Interfaces.Calculatrice;
+import TME4.Interfaces.Service;
+
+public class CalculatriceAppelDistant implements Service , Calculatrice {
+
+
+	@Override
+	public Integer add(Integer a, Integer b) {
+		return a+b;
+	}
+
+	@Override
+	public Integer sous(Integer a, Integer b) {
+		return a-b;
+	}
+
+	@Override
+	public Integer mult(Integer a, Integer b) {
+		return a*b;
+	}
+
+	@Override
+	public ResDiv div(Integer a, Integer b) {
+		int r = a/b;
+		int q = a%b;
+		return new ResDiv(q,r);
+	}
+
+}

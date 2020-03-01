@@ -1,0 +1,7 @@
+package TME4;
+
+import java.net.Socket;
+
+public interface Service {
+	void execute(Socket connexion);
+}

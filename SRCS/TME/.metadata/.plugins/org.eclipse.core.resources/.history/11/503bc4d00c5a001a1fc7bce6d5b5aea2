@@ -1,0 +1,14 @@
+package TME4;
+
+public interface Calculatrice {
+	
+	public int add(int a,int b);
+
+	public int sous(int a,int b);
+	
+	public double mult(int a,int b);
+	
+	class ResDiv {
+		
+	}
+}

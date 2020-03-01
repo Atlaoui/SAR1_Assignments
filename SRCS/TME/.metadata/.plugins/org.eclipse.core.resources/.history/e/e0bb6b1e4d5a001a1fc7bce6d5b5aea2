@@ -1,0 +1,25 @@
+package TME4.Interfaces;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.lang.reflect.Method;
+import java.net.Socket;
+
+
+
+public interface AppelDistant extends Service{
+	default public void execute(Socket connexion) {
+		try(ObjectOutputStream oos = new ObjectOutputStream(connexion.getOutputStream());
+				ObjectInputStream ois = new ObjectInputStream(connexion.getInputStream())){	
+			for(Method m : this.getClass().getMethods()) {
+				
+			}
+			//this.getClass().getMethod(name, parameterTypes);
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

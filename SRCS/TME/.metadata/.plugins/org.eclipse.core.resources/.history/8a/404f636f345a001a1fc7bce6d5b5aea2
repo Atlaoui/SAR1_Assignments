@@ -1,0 +1,36 @@
+package TME4;
+
+import java.net.Socket;
+
+import TME4.Interfaces.Calculatrice;
+
+public class CalculatriceAppelDistant implements Calculatrice {
+
+	@Override
+	public void execute(Socket connexion) {
+		
+
+	}
+
+	@Override
+	public int add(int a, int b) {
+		return 0;
+	}
+
+	@Override
+	public int sous(int a, int b) {
+		return 0;
+	}
+
+	@Override
+	public int mult(int a, int b) {
+		return 0;
+	}
+
+	@Override
+	public ResDiv div(int a, int b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

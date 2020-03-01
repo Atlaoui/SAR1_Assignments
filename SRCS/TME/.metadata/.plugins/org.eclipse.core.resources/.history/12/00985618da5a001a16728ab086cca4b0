@@ -1,0 +1,30 @@
+package TME4;
+
+
+
+import TME4.Interfaces.Annuaire;
+import TME4.Interfaces.ClientProxy;
+
+public class AnnuaireProxy extends ClientProxy implements Annuaire{
+
+	public AnnuaireProxy(String nom, int port) {
+		super(nom,port);
+	}
+
+
+	@Override
+	public String lookup(String nom) {
+		return null;
+	}
+
+	@Override
+	public void bind(String nom, String valeur) {
+		
+	}
+
+	@Override
+	public void unbind(String nom) {
+		
+	}
+
+}

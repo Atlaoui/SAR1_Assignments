@@ -1,0 +1,66 @@
+package TME4;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+
+import TME4.Interfaces.Calculatrice;
+import TME4.Interfaces.Calculatrice.ResDiv;
+import TME4.annotation.SansEtat;
+import TME4.exception.MyProtocolException;
+@SansEtat
+public class CalculatriceService implements Calculatrice{
+
+	@Override
+	public void execute(Socket connexion) {
+		try(ObjectOutputStream oos = new ObjectOutputStream(connexion.getOutputStream());
+				ObjectInputStream ois = new ObjectInputStream(connexion.getInputStream())){	
+			String name = ois.readUTF();
+			int a = ois.readInt();
+			int b = ois.readInt();
+			
+			switch (name) {
+			case "add":
+				oos.writeObject(new Integer (add(a,b)));
+				break;
+			case "sous":
+				oos.writeObject(sous(a,b));
+				break;
+			case "div":
+				oos.writeObject(this.div(a,b));
+				break;
+			case "mult":
+				oos.writeObject(new Integer (this.mult(a,b)));
+				break;
+			default:
+				oos.writeObject(new MyProtocolException());
+				break;
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public Integer add(int a, int b) {
+		return a+b;
+	}
+
+	@Override
+	public Integer sous(int a, int b) {
+		return a-b;
+	}
+
+	@Override
+	public Integer mult(int a, int b) {
+		return a*b;
+	}
+
+	@Override
+	public ResDiv div(int a, int b) {
+		return new ResDiv(a%b,a/b);
+	}
+}
