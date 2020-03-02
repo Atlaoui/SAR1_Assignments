@@ -1,0 +1,64 @@
+#define N 3
+
+mtype = {actif, passif};
+mtype = {ack, agr, mes, term};
+
+chan canaux [N]= [N] of {mtype, int, byte};
+   /* message = <type, val_horloge, emetteur> */
+
+bool termine = 0;
+   /* positionne a vrai quand la terminaison est detectee */
+
+
+/*************************************************/
+
+inline desactivation() {
+}
+
+/*************************************************/
+
+/* VOUS POUVEZ AJOUTER D'AUTRES INLINE */
+
+/*************************************************/
+
+proctype un_site (byte id) {
+
+   byte i, last;
+   byte sdr, dest = (id+1)%N;
+
+   int h, hrec;
+
+   short unack = 0; /* le nombre de messages non acquittes */
+   short nbagr; /* nombre d'accords sur la terminaison recus */
+   
+   mtype mes_tp, etat = actif;
+   
+   h = 0; 
+   do
+      :: ( empty(canaux[id]) && (etat == actif) ) ->   
+            if    
+               :: (1) ->   /* on peut arreter les actions locales */
+                     desactivation()
+
+               :: (1) ->   /* on peut envoyer un message. A COMPLETER */
+            fi
+			
+      :: nempty(canaux[id]) ->   /* on recoit un message. A COMPLETER */
+   od
+}
+
+/*************************************************/
+
+init {
+
+   byte i; 
+   atomic {
+      i=0;
+      do
+         :: i <N ->
+               run un_site(i); 
+               i++
+         :: i == N -> break 
+      od
+   }
+}
