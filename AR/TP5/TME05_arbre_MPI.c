@@ -36,16 +36,13 @@ int getMin(int voisins[] ,int nb_voisins,int my_min){
 }
 
 int isLeaf(int nb_voisins){
-    printf("nb_voisin = \n", nb_voisins);
+//    printf("nb_voisin = \n", nb_voisins);
     return nb_voisins == 1;
 }
 
 void calcul_min(int rang){
     MPI_Status status;
-    //int voisins[NB_SITE+1][3] = {{-1, -1, -1},
-    //{2, 3, -1}, {1, 4, 5},
-    //{1, 6, -1}, {2, -1, -1},
-    //{2, -1, -1}, {3, -1, -1}};
+
     //initialisation
     int i,nb_voisins,voisins[3],min_local,nb_max=3;
     MPI_Recv(&nb_voisins, 1, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
@@ -54,8 +51,8 @@ void calcul_min(int rang){
     printf("%d qui a pour min %d a recus toutes les information nécessaire et va commencer le travaille\n", myRank,min_local);
     //Ont a recus toutes les information
     //si je suis une feuille
-
-    if(isLeaf(nb_voisins)){
+    printf("nb voisins a = %d \n",nb_voisins);
+    if(nb_voisins==1){
         printf("%d est une feuille et il va envoyer sont min (%d) ",myRank,min_local);
         MPI_Send(&min_local,1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD);
     }else{
@@ -63,18 +60,16 @@ void calcul_min(int rang){
         printf("%d s'appret a recevoir des information de c'est voisin ",myRank);
         //ont recois que des feuille a cause du >0
         for(i=nb_voisins;i>0;i--){
-            MPI_Recv(&min_recus, 1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD, &status);
+            MPI_Recv(&min_recus, 1, MPI_INT, voisins[0],TAGINIT, MPI_COMM_WORLD, &status);
             min_local = min(min_local,min_recus);
             nb_recus++;
         }
         printf("%d a calculer que sont min est : %d ",myRank,min_local);
         //on a le min de c'et feuille
         MPI_Send(&min_local,1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD);
+
     }
-
-
-
-
+    printf("%d a fini sont algorithme ",myRank);
 }
 
 /******************************************************************************/
