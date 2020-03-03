@@ -18,40 +18,32 @@ tac = false ->  not state and pre first;
 tel;
 
 
-node tram(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool) returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
-var signal_depart,accepter_demande,porte_demandee,depart_imminent,tic, tac;
+node tram(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool)
+                      returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
+var signal_depart,accepter_demande,porte_demandee,depart_imminent,tic, tac :bool;
 let
  signal_depart=not en_station;
  (tic, tac) = metronome(attention_depart,5);
  depart_imminent = tic or tac;
  accepter_demande=en_station and not signal_depart and porte_ouverte;
- porte_demandee=demande_porte and accepter_demande;
+ porte_demandee=switch (false,(demande_porte and accepter_demande),fermer_porte);
 
------------Sortie------------------------------------------------------------------
- ouvrir_porte=
- porte_ok=
- fermer_porte=depart_imminent and (porte_demandee) 
+--------------------------------Sortie------------------------------------------
+ ouvrir_porte=porte_demandee and en_station;
+ porte_ok=not porte_demandee or not porte_ouverte;
+ fermer_porte=depart_imminent and false->pre porte_demandee ;
 tel
 
-node tramway(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool) returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
+node tramway(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool)
+                          returns ( porte_ok,fermer_porte, ouvrir_porte: bool);
 var tic, tac ,On_en_station: bool;
 let
 
 On_en_station=switch(false,en_station,(not tic and not tac));
-ouvrir_porte = porte_ouverte -> if en_station and demande_porte then true else pre ouvrir_porte;
+ouvrir_porte = porte_ouverte -> if en_station and demande_porte then true
+                                                        else pre ouvrir_porte;
 (tic, tac) = metronome(attention_depart,5);
 fermer_porte = not tic and not tac;
 porte_ok = demande_porte and On_en_station and (not porte_ouverte);
 
 tel;
-
-
-
-
-
-
---transition
--- fermer_porte ouvrir_porte demande_porte
-
---etat
---porte_ouverte, porte_ferme  en_station
