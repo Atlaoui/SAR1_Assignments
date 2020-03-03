@@ -5,6 +5,7 @@
 #define TAGINIT 0
 #define NB_SITE 6
 
+int myRank;
 void simulateur(void) {
     int i;
 
@@ -19,6 +20,7 @@ void simulateur(void) {
     {2, -1, -1}, {3, -1, -1}};
 
     for(i=1; i<=NB_SITE; i++){
+        printf("nb = %d\n", nb_voisins[i]);
         MPI_Send(&nb_voisins[i], 1, MPI_INT, i, TAGINIT, MPI_COMM_WORLD);
         MPI_Send(voisins[i],nb_voisins[i], MPI_INT, i, TAGINIT, MPI_COMM_WORLD);
         MPI_Send(&min_local[i], 1, MPI_INT, i, TAGINIT, MPI_COMM_WORLD);
@@ -29,19 +31,47 @@ void simulateur(void) {
 /* Ajout de TP   */
 int min(int a, int b) {return (a<b?a:b);}
 
-int getMin(int voisins[] ,nb_voisins,my_min){
-    
+int getMin(int voisins[] ,int nb_voisins,int my_min){
+
+}
+
+int isLeaf(int nb_voisins){
+    printf("nb_voisin = \n", nb_voisins);
+    return nb_voisins == 1;
 }
 
 void calcul_min(int rang){
     MPI_Status status;
-    //Ont recois touts les info nécessaire
-    int nb_voisins,voisin[3],min_local;
+    //int voisins[NB_SITE+1][3] = {{-1, -1, -1},
+    //{2, 3, -1}, {1, 4, 5},
+    //{1, 6, -1}, {2, -1, -1},
+    //{2, -1, -1}, {3, -1, -1}};
+    //initialisation
+    int i,nb_voisins,voisins[3],min_local,nb_max=3;
     MPI_Recv(&nb_voisins, 1, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
-    MPI_Recv(&voisin, 3, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
+    MPI_Recv(&voisins, nb_max, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
     MPI_Recv(&min_local, 1, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
-
+    printf("%d qui a pour min %d a recus toutes les information nécessaire et va commencer le travaille\n", myRank,min_local);
     //Ont a recus toutes les information
+    //si je suis une feuille
+
+    if(isLeaf(nb_voisins)){
+        printf("%d est une feuille et il va envoyer sont min (%d) ",myRank,min_local);
+        MPI_Send(&min_local,1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD);
+    }else{
+        int min_recus,nb_recus=0;
+        printf("%d s'appret a recevoir des information de c'est voisin ",myRank);
+        //ont recois que des feuille a cause du >0
+        for(i=nb_voisins;i>0;i--){
+            MPI_Recv(&min_recus, 1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD, &status);
+            min_local = min(min_local,min_recus);
+            nb_recus++;
+        }
+        printf("%d a calculer que sont min est : %d ",myRank,min_local);
+        //on a le min de c'et feuille
+        MPI_Send(&min_local,1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD);
+    }
+
 
 
 
@@ -50,7 +80,7 @@ void calcul_min(int rang){
 /******************************************************************************/
 
 int main (int argc, char* argv[]) {
-    int nb_proc,rang;
+    int nb_proc;
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &nb_proc);
 
@@ -60,12 +90,12 @@ int main (int argc, char* argv[]) {
         exit(2);
     }
 
-    MPI_Comm_rank(MPI_COMM_WORLD, &rang);
+    MPI_Comm_rank(MPI_COMM_WORLD, &myRank);
 
-    if (rang == 0) {
+    if (myRank == 0) {
         simulateur();
     } else {
-        calcul_min(rang);
+        calcul_min(myRank);
     }
 
     MPI_Finalize();
