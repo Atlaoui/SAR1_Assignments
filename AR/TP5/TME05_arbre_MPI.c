@@ -51,7 +51,7 @@ void calcul_min(int rang){
     printf("%d qui a pour min %d a recus toutes les information nécessaire et va commencer le travaille\n", myRank,min_local);
     //Ont a recus toutes les information
     //si je suis une feuille
-    printf("nb voisins a = %d \n",nb_voisins);
+//    printf("nb voisins a = %d \n",nb_voisins);
     if(nb_voisins==1){
         printf("%d est une feuille et il va envoyer sont min (%d) ",myRank,min_local);
         MPI_Send(&min_local,1, MPI_INT, voisins[0], TAGINIT, MPI_COMM_WORLD);
