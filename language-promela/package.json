@@ -1,0 +1,41 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+  "_id": "language-promela@0.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-uvZrUpRQPSOmlm7TwXugZDbJggSiRYFo97VhQbQfxhq8hT5bt99q+c60Hb3g4HPUYJM5+/tQNTHg/+IZgLTIAw==",
+  "_location": "/language-promela",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+  "_shasum": "f211ed33edcd284e08c8a198594093081187fbd3",
+  "_spec": "https://www.atom.io/api/packages/language-promela/versions/0.4.0/tarball",
+  "_where": "/tmp/apm-install-dir-12023-13220-199slg4.6jmf",
+  "bugs": {
+    "url": "https://github.com/ubinix-warun/language-promela/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Atom language support for Promela",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "https://github.com/ubinix-warun/language-promela#readme",
+  "license": "MIT",
+  "name": "language-promela",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubinix-warun/language-promela.git"
+  },
+  "version": "0.4.0"
+}
