@@ -15,34 +15,28 @@ returns
 var
   V34_tic: bool;
   V35_tac: bool;
-  V108_hz: int;
-  V109_n: int;
-  V110_first: bool;
-  V111_state: bool;
-  V121_scrutating: bool;
-  V122_final: bool;
+  V103_hz: int;
+  V104_n: int;
+  V105_first: bool;
+  V106_state: bool;
 
 let
-  assert (V122_final and depart);
-  porte_ok = (depart_imminent and (if ((not porte_demandee) and (not 
-  porte_ouverte)) then true else porte_ouverte));
+  porte_ok = (false -> ((pre depart_imminent) and (if ((not porte_demandee) and 
+  (not porte_ouverte)) then true else (not porte_ouverte))));
   fermer_porte = (false -> ((depart_imminent and porte_ouverte) and 
   porte_demandee));
-  ouvrir_porte = ((porte_demandee and en_station) and (not porte_ouverte));
-  depart = (false -> ((not en_station) and (pre en_station)));
-  accepter_demande = (false -> ((demande_porte and (depart or (not 
-  attention_depart))) and en_station));
+  ouvrir_porte = ((demande_porte and en_station) and (not porte_ouverte));
+  depart = (false -> (((not en_station) and (pre en_station)) and (not 
+  depart_imminent)));
+  accepter_demande = ((not en_station) and (not attention_depart));
   porte_demandee = (demande_porte and accepter_demande);
   depart_imminent = (V34_tic or V35_tac);
-  V34_tic = (false -> (V111_state and (pre V110_first)));
-  V35_tac = (false -> ((not V111_state) and (pre V110_first)));
-  V108_hz = (0 -> (if (attention_depart or ((pre V108_hz) > 0)) then (5 - 
-  V109_n) else (pre V108_hz)));
-  V109_n = (0 -> (if (V34_tic or V35_tac) then ((pre V109_n) + 1) else 0));
-  V110_first = (false -> (V108_hz > 0));
-  V111_state = (true -> (if (pre V111_state) then false else true));
-  V121_scrutating = (false -> ((attention_depart or (pre V121_scrutating)) and 
-  (not depart)));
-  V122_final = (false -> ((V121_scrutating and porte_ok) or (pre V122_final)));
+  V34_tic = (false -> (V106_state and (pre V105_first)));
+  V35_tac = (false -> ((not V106_state) and (pre V105_first)));
+  V103_hz = (0 -> (if (attention_depart or ((pre V103_hz) > 0)) then (5 - 
+  V104_n) else (pre V103_hz)));
+  V104_n = (0 -> (if (V34_tic or V35_tac) then ((pre V104_n) + 1) else 0));
+  V105_first = (false -> (V103_hz > 0));
+  V106_state = (true -> (if (pre V106_state) then false else true));
 tel
 

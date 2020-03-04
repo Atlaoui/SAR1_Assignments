@@ -36,21 +36,21 @@ accepter_demande,porte_demandee,depart_imminent: bool);
 var tic ,tac :bool;
 let
 
- depart= false -> (not en_station) and (pre en_station);
- accepter_demande= false -> demande_porte and (depart or not attention_depart) and en_station;
+ depart= false -> (not en_station) and (pre en_station) and not depart_imminent;
+ --accepter_demande= false -> demande_porte and (depart or not attention_depart) and en_station;
+ accepter_demande= not en_station and not attention_depart;
  (tic, tac) = metronome(attention_depart,5);
  porte_demandee= demande_porte and accepter_demande;
  depart_imminent=tic or tac;
-
 --------------------------------Sortie------------------------------------------
  fermer_porte= false-> depart_imminent and porte_ouverte and porte_demandee;
- ouvrir_porte=porte_demandee and en_station and not porte_ouverte;
- porte_ok= depart_imminent and if not porte_demandee and not porte_ouverte then true else porte_ouverte;
+ ouvrir_porte=demande_porte and en_station and not porte_ouverte;
+ porte_ok= false->pre depart_imminent and if not porte_demandee and not porte_ouverte then true else not porte_ouverte;
 
 
  --------------------------------Assert-----------------------------------------
 
- assert(ouvrir_porte and not en_station);
+ --assert(ouvrir_porte and not en_station);
 
 tel
 
