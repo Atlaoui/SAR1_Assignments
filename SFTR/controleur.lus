@@ -1,3 +1,4 @@
+--https://github.com/Arxwel/LustreLang
 node Feux(TD,TI,CP : bool) returns (v,c,p : bool);
 var CPon : bool;
 let
