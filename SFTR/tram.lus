@@ -1,8 +1,8 @@
 node once_from_to(X, A, B : bool) returns (ok : bool);
 var scrutating,final : bool;
 let
-	scrutating = false -> (A or pre scrutating) and not B;	
-	final = false -> (scrutating and X) or pre final; 
+	scrutating = false -> (A or pre scrutating) and not B;
+	final = false -> (scrutating and X) or pre final;
 	ok = final and B;
 tel
 
@@ -29,22 +29,28 @@ tel;
 
 node tram(demande_porte ,porte_ouverte ,en_station ,attention_depart: bool) returns ( porte_ok,fermer_porte, ouvrir_porte, depart,
 accepter_demande,porte_demandee,depart_imminent: bool);
-------------------------------Variable-----------------------------------------
+
+------------------------------Variable------------------------------------------
 --var  depart,accepter_demande,porte_demandee,depart_imminent :bool;
+--------------------------------------------------------------------------------
 var tic ,tac :bool;
 let
-	
+
  depart= false -> (not en_station) and (pre en_station);
  accepter_demande= false -> demande_porte and (depart or not attention_depart) and en_station;
  (tic, tac) = metronome(attention_depart,5);
  porte_demandee= demande_porte and accepter_demande;
  depart_imminent=tic or tac;
- 
+
 --------------------------------Sortie------------------------------------------
  fermer_porte= false-> depart_imminent and porte_ouverte and porte_demandee;
  ouvrir_porte=porte_demandee and en_station and not porte_ouverte;
  porte_ok= depart_imminent and if not porte_demandee and not porte_ouverte then true else porte_ouverte;
- assert(once_from_to(porte_ok,attention_depart,depart));
+
+
+ --------------------------------Assert-----------------------------------------
+
+ assert(ouvrir_porte and not en_station);
 
 tel
 
@@ -121,9 +127,7 @@ let
  ouvrir_porte=porte_demandee and en_station;
  porte_ok=not porte_demandee or not porte_ouverte;
  fermer_porte=depart_imminent and false->pre porte_demandee;
- 
- 
- 
+
+
+
 tel
-
-
