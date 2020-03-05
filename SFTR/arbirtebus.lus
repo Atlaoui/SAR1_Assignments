@@ -1,0 +1,20 @@
+node cellule(req_in, token_in, override_in, grant_in: bool) returns ( ack_out,token_out, override_out, grant_out: bool)
+var w, t :bool;
+let 
+    t = 0 -> pre token_in;  
+    w = 0-> pre req_in and (t or w);
+
+    override_out = (w and t) or override_in;
+    grant_out = not req_in and grant_in;
+    ack_out = ((w and t) or grant_in) and req_in; 
+tel
+
+node arbitre(req_in1, req_in2, req_in3: bool) returns (ack_out1, ack_out2, ack_out3: bool)
+var  GO1,GI1,TO1,OVO1,OVI1,GO2,GI2,TO2,OVO2,GO3,GI3,TO3,OVO3: bool;
+let 
+    (ack_out1,TO1, OVO1, GO1) = cellule(req_in1,1->TO1, 0->OVI1,GI1);
+
+    (ack_out2,TO2, OVO2, GO2) = cellule(req_in1,TO1, OVO1, GO1);
+    
+    (ack_out3,TO3, OVO3, GO3) = cellule(req_in1,TO2, OVO2, not OVO3);
+tel
