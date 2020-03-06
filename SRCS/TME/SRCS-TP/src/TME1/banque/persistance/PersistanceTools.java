@@ -92,11 +92,11 @@ public class PersistanceTools {
 
 	//TD 1 Q1
 	public static void bind(InputStream in, OutputStream out) throws IOException {
-		out.write(in.readAllBytes());
+	//	out.write(in.readAllBytes());
 		out.flush();
 	}
 	public static void bind(InputStream in, OutputStream out ,int max) throws IOException {
-		out.write(in.readNBytes(max));
+	//	out.write(in.readNBytes(max));
 		out.flush();
 
 	}

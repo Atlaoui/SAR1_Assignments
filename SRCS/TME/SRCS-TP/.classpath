@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GRPC"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/GRE"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/grpc-java/jars/grpc-all-1.26.0.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/guava/jars/failureaccess-1.0.1.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/guava/jars/guava-HEAD-jre-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/guava/jars/guava-testlib-HEAD-jre-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/perfmark/jars/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/perfmark/jars/perfmark-agent-0.21.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/perfmark/jars/perfmark-api-0.21.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/perfmark/jars/perfmark-impl-0.21.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/perfmark/jars/perfmark-java6-0.21.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/protobuf-3.11.0/jars/protobuf-java-3.11.0.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/protobuf-3.11.0/jars/protobuf-javalite-3.11.0.jar"/>
-	<classpathentry kind="lib" path="/home/adrien/Software/protobuf-3.11.0/jars/protobuf-java-util-3.11.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
