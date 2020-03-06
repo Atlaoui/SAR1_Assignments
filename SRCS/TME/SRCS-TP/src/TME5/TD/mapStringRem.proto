@@ -1,0 +1,42 @@
+syntax = "proto3";
+package srcs;
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+message Entry {
+	string key = 1;
+	string value = 2;
+}
+
+service MapStringRem {
+	rpc put (entry) returns (boolean);
+	rpc get (google.protobuf.StringValue) returns (string);
+}
+
+
+/*ça va généer
+
+	Class 
+	4 class static
+		-> mapstringRem rumple base a étandre pour le seervice
+		->MapstringremBlockingStub 
+		->MapstringrmBlocking
+		->MapStringRetuStub
+		
+	EntryOnBuilder.java
+	class empty
+	static class EntryBuilders
+			set
+			set
+			builder->renvois entry
+		
+public void put(Entry e, StreamObserver <B > o){
+    map.put(e.getKey(),e.getValue());
+
+    ret.onNext(Empty.getDefaultInstance());
+    ret.onComplete();
+
+}
+
+
+
+*/

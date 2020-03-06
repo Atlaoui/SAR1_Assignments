@@ -1,9 +1,16 @@
 syntax="proto3";
 package TME5;
-
+option java_package = TME5.grpc;
 option java_multiple_files = true;
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
 
 message mess {
 	string expediteur;
 	string content;
+}
+
+
+service newMessage{
+	rpc SayHello (mess) returns (HelloReply);
 }
