@@ -15,13 +15,18 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import TME5.ChatImpl;
+import TME5.ChatProxy;
+import TME5.grpc.BuilderUtil;
+import TME5.interfaces.Chat;
+import TME5.interfaces.MessageReceiver;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import srcs.chat.implem.Chat;
-import srcs.chat.implem.ChatImpl;
-import srcs.chat.implem.ChatProxy;
-import srcs.chat.implem.MessageReceiver;
-import srcs.grpc.util.BuilderUtil;
+//import srcs.chat.implem.Chat;
+//import srcs.chat.implem.ChatImpl;
+//import srcs.chat.implem.ChatProxy;
+//import srcs.chat.implem.MessageReceiver;
+//import srcs.grpc.util.BuilderUtil;
 
 public class Testchat {
 	

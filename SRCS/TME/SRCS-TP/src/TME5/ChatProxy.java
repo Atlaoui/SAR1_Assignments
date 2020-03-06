@@ -12,7 +12,7 @@ public class ChatProxy implements Chat{
 	private MessageReceiver msgRec;
 	private String nom;
 
-	public ChatProxy(MessageReceiver msg,int port , String nom) {
+	public ChatProxy( String nom,int port ,MessageReceiver msg) {
 		chatters = new  ArrayList<>();
 		this.port=port;
 		msgRec=msg;

@@ -1533,15 +1533,15 @@ public final class Messages {
       "wrappers.proto\032\033google/protobuf/empty.pr" +
       "oto\"+\n\004mess\022\022\n\nexpediteur\030\001 \001(\t\022\017\n\007conte" +
       "nt\030\002 \001(\t\"5\n\007address\022\016\n\006pseudo\030\001 \001(\t\022\014\n\004h" +
-      "ost\030\002 \001(\t\022\014\n\004port\030\003 \001(\0052\200\002\n\nnewMessage\0226" +
-      "\n\tsubscribe\022\r.TME5.address\032\032.google.prot" +
-      "obuf.BoolValue\022.\n\004send\022\n.TME5.mess\032\032.goo" +
-      "gle.protobuf.BoolValue\022E\n\013listChatter\022\026." +
-      "google.protobuf.Empty\032\034.google.protobuf." +
-      "StringValue0\001\022C\n\013unsubscribe\022\034.google.pr" +
-      "otobuf.StringValue\032\026.google.protobuf.Emp" +
-      "ty2C\n\017MessageReceiver\0220\n\nnewMessage\022\n.TM" +
-      "E5.mess\032\026.google.protobuf.Emptyb\006proto3"
+      "ost\030\002 \001(\t\022\014\n\004port\030\003 \001(\0052\372\001\n\004Chat\0226\n\tsubs" +
+      "cribe\022\r.TME5.address\032\032.google.protobuf.B" +
+      "oolValue\022.\n\004send\022\n.TME5.mess\032\032.google.pr" +
+      "otobuf.BoolValue\022E\n\013listChatter\022\026.google" +
+      ".protobuf.Empty\032\034.google.protobuf.String" +
+      "Value0\001\022C\n\013unsubscribe\022\034.google.protobuf" +
+      ".StringValue\032\026.google.protobuf.Empty2C\n\017" +
+      "MessageReceiver\0220\n\nnewMessage\022\n.TME5.mes" +
+      "s\032\026.google.protobuf.Emptyb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

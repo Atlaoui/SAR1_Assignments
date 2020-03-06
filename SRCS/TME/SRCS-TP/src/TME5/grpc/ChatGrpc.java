@@ -20,11 +20,11 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.28.0-SNAPSHOT)",
     comments = "Source: messages.proto")
-public final class newMessageGrpc {
+public final class ChatGrpc {
 
-  private newMessageGrpc() {}
+  private ChatGrpc() {}
 
-  public static final String SERVICE_NAME = "TME5.newMessage";
+  public static final String SERVICE_NAME = "TME5.Chat";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<TME5.grpc.Messages.address,
@@ -38,10 +38,10 @@ public final class newMessageGrpc {
   public static io.grpc.MethodDescriptor<TME5.grpc.Messages.address,
       com.google.protobuf.BoolValue> getSubscribeMethod() {
     io.grpc.MethodDescriptor<TME5.grpc.Messages.address, com.google.protobuf.BoolValue> getSubscribeMethod;
-    if ((getSubscribeMethod = newMessageGrpc.getSubscribeMethod) == null) {
-      synchronized (newMessageGrpc.class) {
-        if ((getSubscribeMethod = newMessageGrpc.getSubscribeMethod) == null) {
-          newMessageGrpc.getSubscribeMethod = getSubscribeMethod =
+    if ((getSubscribeMethod = ChatGrpc.getSubscribeMethod) == null) {
+      synchronized (ChatGrpc.class) {
+        if ((getSubscribeMethod = ChatGrpc.getSubscribeMethod) == null) {
+          ChatGrpc.getSubscribeMethod = getSubscribeMethod =
               io.grpc.MethodDescriptor.<TME5.grpc.Messages.address, com.google.protobuf.BoolValue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "subscribe"))
@@ -50,7 +50,7 @@ public final class newMessageGrpc {
                   TME5.grpc.Messages.address.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.BoolValue.getDefaultInstance()))
-              .setSchemaDescriptor(new newMessageMethodDescriptorSupplier("subscribe"))
+              .setSchemaDescriptor(new ChatMethodDescriptorSupplier("subscribe"))
               .build();
         }
       }
@@ -69,10 +69,10 @@ public final class newMessageGrpc {
   public static io.grpc.MethodDescriptor<TME5.grpc.Messages.mess,
       com.google.protobuf.BoolValue> getSendMethod() {
     io.grpc.MethodDescriptor<TME5.grpc.Messages.mess, com.google.protobuf.BoolValue> getSendMethod;
-    if ((getSendMethod = newMessageGrpc.getSendMethod) == null) {
-      synchronized (newMessageGrpc.class) {
-        if ((getSendMethod = newMessageGrpc.getSendMethod) == null) {
-          newMessageGrpc.getSendMethod = getSendMethod =
+    if ((getSendMethod = ChatGrpc.getSendMethod) == null) {
+      synchronized (ChatGrpc.class) {
+        if ((getSendMethod = ChatGrpc.getSendMethod) == null) {
+          ChatGrpc.getSendMethod = getSendMethod =
               io.grpc.MethodDescriptor.<TME5.grpc.Messages.mess, com.google.protobuf.BoolValue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "send"))
@@ -81,7 +81,7 @@ public final class newMessageGrpc {
                   TME5.grpc.Messages.mess.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.BoolValue.getDefaultInstance()))
-              .setSchemaDescriptor(new newMessageMethodDescriptorSupplier("send"))
+              .setSchemaDescriptor(new ChatMethodDescriptorSupplier("send"))
               .build();
         }
       }
@@ -100,10 +100,10 @@ public final class newMessageGrpc {
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       com.google.protobuf.StringValue> getListChatterMethod() {
     io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.google.protobuf.StringValue> getListChatterMethod;
-    if ((getListChatterMethod = newMessageGrpc.getListChatterMethod) == null) {
-      synchronized (newMessageGrpc.class) {
-        if ((getListChatterMethod = newMessageGrpc.getListChatterMethod) == null) {
-          newMessageGrpc.getListChatterMethod = getListChatterMethod =
+    if ((getListChatterMethod = ChatGrpc.getListChatterMethod) == null) {
+      synchronized (ChatGrpc.class) {
+        if ((getListChatterMethod = ChatGrpc.getListChatterMethod) == null) {
+          ChatGrpc.getListChatterMethod = getListChatterMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.StringValue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listChatter"))
@@ -112,7 +112,7 @@ public final class newMessageGrpc {
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.StringValue.getDefaultInstance()))
-              .setSchemaDescriptor(new newMessageMethodDescriptorSupplier("listChatter"))
+              .setSchemaDescriptor(new ChatMethodDescriptorSupplier("listChatter"))
               .build();
         }
       }
@@ -131,10 +131,10 @@ public final class newMessageGrpc {
   public static io.grpc.MethodDescriptor<com.google.protobuf.StringValue,
       com.google.protobuf.Empty> getUnsubscribeMethod() {
     io.grpc.MethodDescriptor<com.google.protobuf.StringValue, com.google.protobuf.Empty> getUnsubscribeMethod;
-    if ((getUnsubscribeMethod = newMessageGrpc.getUnsubscribeMethod) == null) {
-      synchronized (newMessageGrpc.class) {
-        if ((getUnsubscribeMethod = newMessageGrpc.getUnsubscribeMethod) == null) {
-          newMessageGrpc.getUnsubscribeMethod = getUnsubscribeMethod =
+    if ((getUnsubscribeMethod = ChatGrpc.getUnsubscribeMethod) == null) {
+      synchronized (ChatGrpc.class) {
+        if ((getUnsubscribeMethod = ChatGrpc.getUnsubscribeMethod) == null) {
+          ChatGrpc.getUnsubscribeMethod = getUnsubscribeMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.StringValue, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "unsubscribe"))
@@ -143,7 +143,7 @@ public final class newMessageGrpc {
                   com.google.protobuf.StringValue.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new newMessageMethodDescriptorSupplier("unsubscribe"))
+              .setSchemaDescriptor(new ChatMethodDescriptorSupplier("unsubscribe"))
               .build();
         }
       }
@@ -154,50 +154,50 @@ public final class newMessageGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static newMessageStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<newMessageStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<newMessageStub>() {
+  public static ChatStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ChatStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChatStub>() {
         @java.lang.Override
-        public newMessageStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new newMessageStub(channel, callOptions);
+        public ChatStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChatStub(channel, callOptions);
         }
       };
-    return newMessageStub.newStub(factory, channel);
+    return ChatStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static newMessageBlockingStub newBlockingStub(
+  public static ChatBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<newMessageBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<newMessageBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ChatBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChatBlockingStub>() {
         @java.lang.Override
-        public newMessageBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new newMessageBlockingStub(channel, callOptions);
+        public ChatBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChatBlockingStub(channel, callOptions);
         }
       };
-    return newMessageBlockingStub.newStub(factory, channel);
+    return ChatBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static newMessageFutureStub newFutureStub(
+  public static ChatFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<newMessageFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<newMessageFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ChatFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ChatFutureStub>() {
         @java.lang.Override
-        public newMessageFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new newMessageFutureStub(channel, callOptions);
+        public ChatFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ChatFutureStub(channel, callOptions);
         }
       };
-    return newMessageFutureStub.newStub(factory, channel);
+    return ChatFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class newMessageImplBase implements io.grpc.BindableService {
+  public static abstract class ChatImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -275,16 +275,16 @@ public final class newMessageGrpc {
 
   /**
    */
-  public static final class newMessageStub extends io.grpc.stub.AbstractAsyncStub<newMessageStub> {
-    private newMessageStub(
+  public static final class ChatStub extends io.grpc.stub.AbstractAsyncStub<ChatStub> {
+    private ChatStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected newMessageStub build(
+    protected ChatStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new newMessageStub(channel, callOptions);
+      return new ChatStub(channel, callOptions);
     }
 
     /**
@@ -334,16 +334,16 @@ public final class newMessageGrpc {
 
   /**
    */
-  public static final class newMessageBlockingStub extends io.grpc.stub.AbstractBlockingStub<newMessageBlockingStub> {
-    private newMessageBlockingStub(
+  public static final class ChatBlockingStub extends io.grpc.stub.AbstractBlockingStub<ChatBlockingStub> {
+    private ChatBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected newMessageBlockingStub build(
+    protected ChatBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new newMessageBlockingStub(channel, callOptions);
+      return new ChatBlockingStub(channel, callOptions);
     }
 
     /**
@@ -390,16 +390,16 @@ public final class newMessageGrpc {
 
   /**
    */
-  public static final class newMessageFutureStub extends io.grpc.stub.AbstractFutureStub<newMessageFutureStub> {
-    private newMessageFutureStub(
+  public static final class ChatFutureStub extends io.grpc.stub.AbstractFutureStub<ChatFutureStub> {
+    private ChatFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected newMessageFutureStub build(
+    protected ChatFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new newMessageFutureStub(channel, callOptions);
+      return new ChatFutureStub(channel, callOptions);
     }
 
     /**
@@ -446,10 +446,10 @@ public final class newMessageGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final newMessageImplBase serviceImpl;
+    private final ChatImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(newMessageImplBase serviceImpl, int methodId) {
+    MethodHandlers(ChatImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -490,9 +490,9 @@ public final class newMessageGrpc {
     }
   }
 
-  private static abstract class newMessageBaseDescriptorSupplier
+  private static abstract class ChatBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    newMessageBaseDescriptorSupplier() {}
+    ChatBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -501,21 +501,21 @@ public final class newMessageGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("newMessage");
+      return getFileDescriptor().findServiceByName("Chat");
     }
   }
 
-  private static final class newMessageFileDescriptorSupplier
-      extends newMessageBaseDescriptorSupplier {
-    newMessageFileDescriptorSupplier() {}
+  private static final class ChatFileDescriptorSupplier
+      extends ChatBaseDescriptorSupplier {
+    ChatFileDescriptorSupplier() {}
   }
 
-  private static final class newMessageMethodDescriptorSupplier
-      extends newMessageBaseDescriptorSupplier
+  private static final class ChatMethodDescriptorSupplier
+      extends ChatBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    newMessageMethodDescriptorSupplier(String methodName) {
+    ChatMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -530,11 +530,11 @@ public final class newMessageGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (newMessageGrpc.class) {
+      synchronized (ChatGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new newMessageFileDescriptorSupplier())
+              .setSchemaDescriptor(new ChatFileDescriptorSupplier())
               .addMethod(getSubscribeMethod())
               .addMethod(getSendMethod())
               .addMethod(getListChatterMethod())
