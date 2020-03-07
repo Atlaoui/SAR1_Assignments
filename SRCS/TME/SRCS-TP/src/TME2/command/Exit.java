@@ -1,23 +1,25 @@
 package TME2.command;
 
+import java.util.List;
+
 public class Exit implements Command {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String args;
-	public Exit() {
+	private final int value;
+	public Exit(List<String> args) {
+		if(args.size()>1)
+			throw new IllegalArgumentException("To much args");
+		if(args.size()==1)
+			value=Integer.parseInt(args.get(0));
+		else
+			value=0;
 
-	}
-	public Exit(String args) {
-		this.args=args;
 	}
 	@Override
 	public void execute() throws IllegalArgumentException{
-		if(args==null)
-			System.exit(1);
-		else
-			System.exit(Integer.parseInt(args));
+		System.out.println("End");
+		System.exit(this.value);
 	}
-
 }

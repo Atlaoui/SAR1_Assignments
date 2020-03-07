@@ -1,0 +1,140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+ATT	TP2/TME2_philo.c	/^#define ATT /;"	d	file:
+CHOPSTICK_YOURS	Squelettes/TME02_philo.c	/^#define CHOPSTICK_YOURS /;"	d	file:
+CHOPSTICK_YOURS	TP2/TME2_philo.c	/^#define CHOPSTICK_YOURS /;"	d	file:
+CHOPSTICK_YOURS	TP2/philo_squelette.c	/^#define CHOPSTICK_YOURS /;"	d	file:
+DONE	Squelettes/TME02_philo.c	/^#define DONE /;"	d	file:
+DONE	TP2/TME2_philo.c	/^#define DONE /;"	d	file:
+DONE	TP2/philo_squelette.c	/^#define DONE /;"	d	file:
+DONE_EATING	Squelettes/TME02_philo.c	/^#define DONE_EATING /;"	d	file:
+DONE_EATING	TP2/TME2_philo.c	/^#define DONE_EATING /;"	d	file:
+DONE_EATING	TP2/philo_squelette.c	/^#define DONE_EATING /;"	d	file:
+END	TP3/Ricart_Agrawala.c	/^#define END /;"	d	file:
+ENDED	TP3/Ricart_Agrawala.c	/^#define ENDED /;"	d	file:
+HUNGRY	Squelettes/TME02_philo.c	/^#define HUNGRY /;"	d	file:
+HUNGRY	TP2/TME2_philo.c	/^#define HUNGRY /;"	d	file:
+HUNGRY	TP2/philo_squelette.c	/^#define HUNGRY /;"	d	file:
+MASTER	TP1/hello_master.c	/^#define MASTER /;"	d	file:
+MAX_CS	TP3/Ricart_Agrawala.c	/^#define MAX_CS /;"	d	file:
+MPI_SERVER	TP3/mpi_server.h	/^#define MPI_SERVER$/;"	d
+MPI_SERVER	TP3/server.h	/^#define MPI_SERVER$/;"	d
+NB	Squelettes/TME02_philo.c	/^int NB;               \/\/ nb total de processus$/;"	v	typeref:typename:int
+NB	TP2/TME2_philo.c	/^int NB;               \/\/ nb total de processus$/;"	v	typeref:typename:int
+NB	TP2/philo_squelette.c	/^int NB;               \/\/ nb total de processus$/;"	v	typeref:typename:int
+NB_MEALS	Squelettes/TME02_philo.c	/^#define NB_MEALS /;"	d	file:
+NB_MEALS	TP2/TME2_philo.c	/^#define NB_MEALS /;"	d	file:
+NB_MEALS	TP2/philo_squelette.c	/^#define NB_MEALS /;"	d	file:
+NB_SITE	TP5/TME05_arbre_MPI.c	/^#define NB_SITE /;"	d	file:
+NB_SITE	TP5/TME05_echo_MPI.c	/^#define NB_SITE /;"	d	file:
+REPLY	TP3/Ricart_Agrawala.c	/^#define REPLY /;"	d	file:
+REQUEST	TP3/Ricart_Agrawala.c	/^#define REQUEST /;"	d	file:
+SIZE	TP1/hello_master.c	/^#define SIZE /;"	d	file:
+TAGINIT	TP5/TME05_arbre_MPI.c	/^#define TAGINIT /;"	d	file:
+TAGINIT	TP5/TME05_echo_MPI.c	/^#define TAGINIT /;"	d	file:
+THINKING	Squelettes/TME02_philo.c	/^#define THINKING /;"	d	file:
+THINKING	TP2/TME2_philo.c	/^#define THINKING /;"	d	file:
+THINKING	TP2/philo_squelette.c	/^#define THINKING /;"	d	file:
+WANNA_CHOPSTICK	Squelettes/TME02_philo.c	/^#define WANNA_CHOPSTICK /;"	d	file:
+WANNA_CHOPSTICK	TP2/TME2_philo.c	/^#define WANNA_CHOPSTICK /;"	d	file:
+WANNA_CHOPSTICK	TP2/philo_squelette.c	/^#define WANNA_CHOPSTICK /;"	d	file:
+WORKING	TP3/Ricart_Agrawala.c	/^#define WORKING /;"	d	file:
+calcul_min	TP5/TME05_arbre_MPI.c	/^void calcul_min(int rang){$/;"	f	typeref:typename:void
+callback	TP3/mpi_server.h	/^    void (*callback)(int tag, int source); \/\/procedure de reception de message$/;"	m	struct:server	typeref:typename:void (*)(int tag,int source)
+callback	TP3/server.h	/^    void (*callback)(int tag, int source); \/\/procedure de reception de message$/;"	m	struct:server	typeref:typename:void (*)(int tag,int source)
+check_termination	Squelettes/TME02_philo.c	/^int check_termination() {$/;"	f	typeref:typename:int
+check_termination	TP2/TME2_philo.c	/^int check_termination() {$/;"	f	typeref:typename:int
+check_termination	TP2/philo_squelette.c	/^int check_termination() {$/;"	f	typeref:typename:int
+clock	TP3/Ricart_Agrawala.c	/^int clock = 0;$/;"	v	typeref:typename:int
+clock_req	TP3/Ricart_Agrawala.c	/^int clock_req = 0;$/;"	v	typeref:typename:int
+clock_val	Squelettes/TME02_philo.c	/^int clock_val;                          \/\/ valeur d'horloge recue$/;"	v	typeref:typename:int
+clock_val	TP2/TME2_philo.c	/^int clock_val;                          \/\/ valeur d'horloge recue$/;"	v	typeref:typename:int
+clock_val	TP2/philo_squelette.c	/^int clock_val;                          \/\/ valeur d'horloge recue$/;"	v	typeref:typename:int
+destroy_server	TP3/mpi_server.c	/^void destroy_server(){$/;"	f	typeref:typename:void
+file	TP3/Ricart_Agrawala.c	/^int *file;$/;"	v	typeref:typename:int *
+getMin	TP5/TME05_arbre_MPI.c	/^int getMin(int voisins[] ,int nb_voisins,int my_min){$/;"	f	typeref:typename:int
+getMutex	TP3/mpi_server.c	/^pthread_mutex_t* getMutex(){$/;"	f	typeref:typename:pthread_mutex_t *
+isLeaf	TP5/TME05_arbre_MPI.c	/^int isLeaf(int nb_voisins){$/;"	f	typeref:typename:int
+left	Squelettes/TME02_philo.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+left	TP2/TME2_philo.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+left	TP2/philo_squelette.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+left_chopstick	Squelettes/TME02_philo.c	/^int left_chopstick = 0;		\/\/ je n'ai pas celle de gauche$/;"	v	typeref:typename:int
+left_chopstick	TP2/TME2_philo.c	/^int left_chopstick = 0;		\/\/ je n'ai pas celle de gauche$/;"	v	typeref:typename:int
+left_chopstick	TP2/philo_squelette.c	/^int left_chopstick = 0;		\/\/ je n'ai pas celle de gauche$/;"	v	typeref:typename:int
+left_state	Squelettes/TME02_philo.c	/^int left_state  = THINKING;		\/\/ mon voisin de gauche$/;"	v	typeref:typename:int
+left_state	TP2/TME2_philo.c	/^int left_state  = THINKING;		\/\/ mon voisin de gauche$/;"	v	typeref:typename:int
+left_state	TP2/philo_squelette.c	/^int left_state  = THINKING;		\/\/ mon voisin de gauche$/;"	v	typeref:typename:int
+listener	TP3/mpi_server.h	/^    pthread_t listener;$/;"	m	struct:server	typeref:typename:pthread_t
+listener	TP3/server.h	/^    pthread_t listener;$/;"	m	struct:server	typeref:typename:pthread_t
+local_clock	Squelettes/TME02_philo.c	/^int local_clock = 0;                    \/\/ horloge locale$/;"	v	typeref:typename:int
+local_clock	TP2/TME2_philo.c	/^int local_clock = 0;                    \/\/ horloge locale$/;"	v	typeref:typename:int
+local_clock	TP2/philo_squelette.c	/^int local_clock = 0;                    \/\/ horloge locale$/;"	v	typeref:typename:int
+local_state	Squelettes/TME02_philo.c	/^int local_state = THINKING;		\/\/ moi$/;"	v	typeref:typename:int
+local_state	TP2/TME2_philo.c	/^int local_state = THINKING;		\/\/ moi$/;"	v	typeref:typename:int
+local_state	TP2/philo_squelette.c	/^int local_state = THINKING;		\/\/ moi$/;"	v	typeref:typename:int
+main	Squelettes/TME02_philo.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	TP1/hello_master.c	/^int main(int argc, char **argv){$/;"	f	typeref:typename:int
+main	TP1/hello_world_mpi.c	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	TP2/TME2_philo.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	TP2/philo_squelette.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	TP3/Ricart_Agrawala.c	/^int main(int argc, char  *argv[]) {$/;"	f	typeref:typename:int
+main	TP5/TME05_arbre_MPI.c	/^int main (int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	TP5/TME05_echo_MPI.c	/^int main (int argc, char* argv[]) {$/;"	f	typeref:typename:int
+max	Squelettes/TME02_philo.c	/^int max(int a, int b) {$/;"	f	typeref:typename:int
+max	TP2/TME2_philo.c	/^int max(int a, int b) {$/;"	f	typeref:typename:int
+max	TP2/philo_squelette.c	/^int max(int a, int b) {$/;"	f	typeref:typename:int
+meal_times	Squelettes/TME02_philo.c	/^int meal_times[NB_MEALS];        \/\/ dates de mes repas$/;"	v	typeref:typename:int[]
+meal_times	TP2/TME2_philo.c	/^int meal_times[NB_MEALS];        \/\/ dates de mes repas$/;"	v	typeref:typename:int[]
+meal_times	TP2/philo_squelette.c	/^int meal_times[NB_MEALS];        \/\/ dates de mes repas$/;"	v	typeref:typename:int[]
+meals_eaten	Squelettes/TME02_philo.c	/^int meals_eaten = 0;		\/\/ nb de repas consommes localement$/;"	v	typeref:typename:int
+meals_eaten	TP2/TME2_philo.c	/^int meals_eaten = 0;		\/\/ nb de repas consommes localement$/;"	v	typeref:typename:int
+meals_eaten	TP2/philo_squelette.c	/^int meals_eaten = 0;		\/\/ nb de repas consommes localement$/;"	v	typeref:typename:int
+message	TP3/Ricart_Agrawala.c	/^void message(int dest,int tag){$/;"	f	typeref:typename:void
+min	TP5/TME05_arbre_MPI.c	/^int min(int a, int b) {return (a<b?a:b);}$/;"	f	typeref:typename:int
+mutex	TP3/mpi_server.h	/^    pthread_mutex_t mutex;$/;"	m	struct:server	typeref:typename:pthread_mutex_t
+mutex	TP3/server.h	/^    pthread_mutex_t mutex;$/;"	m	struct:server	typeref:typename:pthread_mutex_t
+myRank	TP5/TME05_arbre_MPI.c	/^int myRank;$/;"	v	typeref:typename:int
+my_bcast	TP3/Ricart_Agrawala.c	/^void my_bcast(int req)$/;"	f	typeref:typename:void
+my_clockHandler	TP3/Ricart_Agrawala.c	/^void  my_clockHandler(int other_clock)$/;"	f	typeref:typename:void
+my_respHandler	TP3/Ricart_Agrawala.c	/^void my_respHandler()$/;"	f	typeref:typename:void
+nb_entrer	TP3/Ricart_Agrawala.c	/^int nb_entrer=0;$/;"	v	typeref:typename:int
+nb_proc	TP3/Ricart_Agrawala.c	/^int nb_proc;$/;"	v	typeref:typename:int
+nb_proc_end	TP3/Ricart_Agrawala.c	/^int nb_proc_end =0;$/;"	v	typeref:typename:int
+nb_reply	TP3/Ricart_Agrawala.c	/^int nb_reply = 0;$/;"	v	typeref:typename:int
+nb_request	TP3/Ricart_Agrawala.c	/^int nb_request=0;$/;"	v	typeref:typename:int
+rank	Squelettes/TME02_philo.c	/^int rank;             \/\/ mon identifiant$/;"	v	typeref:typename:int
+rank	TP2/TME2_philo.c	/^int rank;             \/\/ mon identifiant$/;"	v	typeref:typename:int
+rank	TP2/philo_squelette.c	/^int rank;             \/\/ mon identifiant$/;"	v	typeref:typename:int
+rank	TP3/Ricart_Agrawala.c	/^int rank;$/;"	v	typeref:typename:int
+receive_message	Squelettes/TME02_philo.c	/^void receive_message(MPI_Status *status) {$/;"	f	typeref:typename:void
+receive_message	TP2/TME2_philo.c	/^void receive_message(MPI_Status *status) {$/;"	f	typeref:typename:void
+receive_message	TP2/philo_squelette.c	/^void receive_message(MPI_Status *status) {$/;"	f	typeref:typename:void
+release_cs	TP3/Ricart_Agrawala.c	/^void release_cs(){$/;"	f	typeref:typename:void
+remove_my_request	TP3/Ricart_Agrawala.c	/^void remove_my_request(){$/;"	f	typeref:typename:void
+request_cs	TP3/Ricart_Agrawala.c	/^void request_cs()$/;"	f	typeref:typename:void
+right	Squelettes/TME02_philo.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+right	TP2/TME2_philo.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+right	TP2/philo_squelette.c	/^int left, right;      \/\/ les identifiants de mes voisins gauche et droit$/;"	v	typeref:typename:int
+right_chopstick	Squelettes/TME02_philo.c	/^int right_chopstick = 0;	\/\/ je n'ai pas celle de droite$/;"	v	typeref:typename:int
+right_chopstick	TP2/TME2_philo.c	/^int right_chopstick = 0;	\/\/ je n'ai pas celle de droite$/;"	v	typeref:typename:int
+right_chopstick	TP2/philo_squelette.c	/^int right_chopstick = 0;	\/\/ je n'ai pas celle de droite$/;"	v	typeref:typename:int
+right_state	Squelettes/TME02_philo.c	/^int right_state = THINKING;		\/\/ mon voisin de droite$/;"	v	typeref:typename:int
+right_state	TP2/TME2_philo.c	/^int right_state = THINKING;		\/\/ mon voisin de droite$/;"	v	typeref:typename:int
+right_state	TP2/philo_squelette.c	/^int right_state = THINKING;		\/\/ mon voisin de droite$/;"	v	typeref:typename:int
+send_message	Squelettes/TME02_philo.c	/^void send_message(int dest, int tag) {$/;"	f	typeref:typename:void
+send_message	TP2/TME2_philo.c	/^void send_message(int dest, int tag) {$/;"	f	typeref:typename:void
+send_message	TP2/philo_squelette.c	/^void send_message(int dest, int tag) {$/;"	f	typeref:typename:void
+server	TP3/mpi_server.h	/^typedef struct server{$/;"	s
+server	TP3/mpi_server.h	/^} server;$/;"	t	typeref:struct:server
+server	TP3/server.h	/^typedef struct server{$/;"	s
+server	TP3/server.h	/^} server;$/;"	t	typeref:struct:server
+simulateur	TP5/TME05_arbre_MPI.c	/^void simulateur(void) {$/;"	f	typeref:typename:void
+simulateur	TP5/TME05_echo_MPI.c	/^void simulateur(void) {$/;"	f	typeref:typename:void
+start_server	TP3/mpi_server.c	/^void start_server(void (*callback)(int tag, int source)){$/;"	f	typeref:typename:void
+the_server	TP3/mpi_server.c	/^static server the_server;$/;"	v	typeref:typename:server	file:

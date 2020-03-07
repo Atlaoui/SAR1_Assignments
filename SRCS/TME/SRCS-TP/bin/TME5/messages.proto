@@ -1,0 +1,35 @@
+syntax="proto3";
+package TME5;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+
+
+
+message mess {
+	string expediteur =1;
+	string content =2;
+}
+message address { string pseudo =1; 
+				  string host =2;
+				  int32 port = 3;
+}
+
+
+
+service Chat{
+	//public boolean subscribe(String pseudo, String host, int port);
+	rpc subscribe (address) returns (google.protobuf.BoolValue);
+	//public int send(String pseudo, String message);
+	rpc send (mess) returns (google.protobuf.BoolValue);
+	//public List<String> listChatter();
+	rpc listChatter (google.protobuf.Empty) returns (stream google.protobuf.StringValue); 
+	//public void unsubscribe(String pseudo);
+	rpc unsubscribe (google.protobuf.StringValue) returns (google.protobuf.Empty);
+}
+
+service MessageReceiver{
+	//void newMessage(String pseudo_expediteur, String contenu);
+	rpc newMessage (mess) returns (google.protobuf.Empty);
+}	
