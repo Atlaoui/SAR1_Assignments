@@ -165,7 +165,11 @@ public class Interpreteur {
 
 	protected class Save implements Command {
 		private String nameFile;
-		public Save() {
+		public Save(List<String> args) {
+			if (args.size() != 1) {
+				throw new IllegalArgumentException("Usage: save <file>");
+			}
+			nameFile = args.get(0);
 		}
 
 		@Override
