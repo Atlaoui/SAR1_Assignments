@@ -18,20 +18,13 @@ public class test {
 		Interpreteur i = new Interpreteur();
 		String path = "/home/adrien/Documents/Master/Master_1-S2/SRCS/TME/Teste/bin/";
 		URL [] ur = new URL[1]; 
-		try {
-			ur[0] = new File(path).toURI().toURL();
-			URLClassLoader  classLoader = new URLClassLoader(ur);
-			System.out.println(classLoader.loadClass("Add"));
-			i.run();
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println(1);
 		
-		catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			//ur[0] = new File(path).toURI().toURL();
+			//URLClassLoader  classLoader = new URLClassLoader(ur);
+		//	System.out.println(classLoader.loadClass("Add"));
+			i.run();
+		
 	}
 
 

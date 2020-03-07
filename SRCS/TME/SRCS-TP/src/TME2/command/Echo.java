@@ -12,6 +12,7 @@ public class Echo implements Command {
 
 	@Override
 	public void execute(){
-		args.stream().forEach(s -> System.out.println(s+" "));;
+		args.stream().skip(1).forEach(s -> System.out.print(s+" "));
+		System.out.println();	
 	}
 }
