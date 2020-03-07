@@ -14,6 +14,7 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -21,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import TME2.annotation.DontSave;
 import TME2.command.Command;
 import TME2.command.Echo;
 import TME2.command.Exit;
@@ -40,24 +42,14 @@ public class Interpreteur {
 		commandes.put("save", Save.class);
 	}
 
+	@SuppressWarnings("unchecked")
 	public Interpreteur(String nameFile) {
-		commandes = new  HashMap< String,Class<? extends Command>>();
 		try (FileInputStream fout = new FileInputStream(nameFile);
 				ObjectInputStream oot = new ObjectInputStream(fout);){
-			int size = oot.readInt();
-			String name ;
-			Command c;
-			for(int i =0;i<size;i++) {
-				name = oot.readUTF();
-				c = (Command) oot.readObject();
-				commandes.put(name, c.getClass());
-			}
-
-		} catch (IOException e) {
+			commandes = (Map<String, Class<? extends Command>>) oot.readObject();		
+		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		} 
 	}
 
 	public void run() {
@@ -68,11 +60,8 @@ public class Interpreteur {
 			//pk diff ?
 			while(!br.ready())
 				try{args =Arrays.asList( br.readLine().split(" "));
-				if(args.size() >=2)
-					System.out.println(args.toString());
-					com = args.get(0);
-					System.out.println(com);
-					
+				com = args.get(0);
+
 				if (!this.commandes.containsKey(com))
 					throw new IllegalArgumentException("Unknown command: " + com);
 				Class<? extends Command> cls =commandes.get(com);
@@ -81,13 +70,13 @@ public class Interpreteur {
 					c=cls.getConstructor(this.getClass(),List.class).newInstance(this,args);
 				else
 					c=cls.getConstructor(List.class).newInstance(args);
-				c.execute();
+				if(c!=null)
+					c.execute();
 				}catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException  e) {
 					e.printStackTrace();
 				}
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace(); 
 		}finally {
 
@@ -105,15 +94,15 @@ public class Interpreteur {
 	/*********************************Class********************************************/
 
 
-	 class Undeploy implements Command {
+	class Undeploy implements Command {
 		private static final long serialVersionUID = 1L;
 		private String com ;
 
 		public Undeploy (List<String> args) {
 			if(args.size()==0)
 				throw new IllegalArgumentException("Erreur Args");
-			this.com = args.get(0);
-			
+			this.com = args.get(1);
+
 		}
 
 		@Override
@@ -125,7 +114,7 @@ public class Interpreteur {
 	}
 
 	class Deploy implements Command {
-
+		//$HOME/SAR1_Assignments/SRCS/TME/Teste/src
 		private static final long serialVersionUID = 1L;
 		String nom;
 		String path;
@@ -133,28 +122,20 @@ public class Interpreteur {
 		public Deploy( List<String> args) {
 			if (args.size() < 3)
 				throw new IllegalArgumentException("Usage: deploy <name> <dir/jar> <class>");
-			nom = args.get(0);
-			path = args.get(1);
-			classname =args.get(2);
+			nom = args.get(1);
+			path = args.get(2);
+			classname =args.get(3);
 		}
 
-		@SuppressWarnings("unchecked")
 		@Override
 		public void execute() {
-			URL [] ur = new URL[1]; 
-			try (URLClassLoader  classLoader = new URLClassLoader(ur);) {
-				ur[0] = new File(path).toURI().toURL();
-					
-				Class<? >c =  classLoader.loadClass(classname); 
-				
-				if(c.isAssignableFrom(Command.class))
-					commandes.put(nom, (Class<? extends Command>) c);
-				else
-					throw new IllegalArgumentException("Class must be a Command class");
-				
+			try (URLClassLoader loader =new URLClassLoader(new URL[] { new File("$HOME/SAR1_Assignments/SRCS/TME/Teste/bin/").toURI().toURL() })) {
+				Class<? extends Command> c =  loader.loadClass(classname).asSubclass(Command.class); 
+				commandes.put(nom, c);
+
 				System.out.println("Added command: " + nom);
-				
-			} catch (IOException  |ClassNotFoundException | SecurityException  | IllegalArgumentException  e) {
+
+			} catch (IOException  |ClassNotFoundException | SecurityException   e) {
 				e.printStackTrace();
 			} 
 		}
@@ -163,27 +144,30 @@ public class Interpreteur {
 
 
 
-	protected class Save implements Command {
+	class Save implements Command {
+
+		private static final long serialVersionUID = 1L;
 		private String nameFile;
 		public Save(List<String> args) {
-			if (args.size() != 1) {
+			if (args.size() != 2) {
 				throw new IllegalArgumentException("Usage: save <file>");
 			}
-			nameFile = args.get(0);
+			nameFile = args.get(1);
 		}
 
 		@Override
 		public void execute() {
-			try {
-				FileOutputStream fout = new FileOutputStream(new File(nameFile));
-				ObjectOutputStream oot = new ObjectOutputStream(fout);
+			try(FileOutputStream fout = new FileOutputStream(new File(nameFile));
+					ObjectOutputStream oot = new ObjectOutputStream(fout);) {
 				Iterator<Entry<String, Class<? extends Command>>> it = commandes.entrySet().iterator();
-				oot.writeInt(commandes.size());
+				Map<String,Class<? extends Command>> comma = new  HashMap< String,Class<? extends Command>>();
 				while(it.hasNext()) {
 					Entry<String, Class<? extends Command>> e = it.next();
-					oot.writeUTF(e.getKey());
-					oot.writeObject(e.getValue());
+					if(!e.getValue().isAnnotationPresent(DontSave.class)) {
+						comma.put(e.getKey(), e.getValue());
+					}
 				}
+				oot.writeObject(comma);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

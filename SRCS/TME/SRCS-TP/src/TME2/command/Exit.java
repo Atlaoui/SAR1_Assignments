@@ -11,8 +11,8 @@ public class Exit implements Command {
 	public Exit(List<String> args) {
 		if(args.size()>1)
 			throw new IllegalArgumentException("To much args");
-		if(args.size()==1)
-			value=Integer.parseInt(args.get(0));
+		if(args.size()==2)
+			value=Integer.parseInt(args.get(1));
 		else
 			value=0;
 

@@ -1,8 +1,11 @@
 import java.util.List;
 
+import TME2.annotation.DontSave;
 import TME2.command.Command;
-
+@DontSave
 public class Add implements Command{
+
+	private static final long serialVersionUID = 1L;
 	private final int a;
 	private final int b;
 	public Add(List<String> args) {

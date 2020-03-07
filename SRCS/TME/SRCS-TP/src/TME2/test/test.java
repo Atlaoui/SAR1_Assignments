@@ -9,8 +9,8 @@ import TME2.intpreter.Interpreteur;
 
 public class test {
 	public static void main(String[] args) {
-		Interpreteur i = new Interpreteur();
-		String path = "/home/adrien/Documents/Master/Master_1-S2/SRCS/TME/Teste/bin/";
+		Interpreteur i = new Interpreteur("$HOME/SAR1_Assignments/SRCS/TME/SRCS-TP/teste");
+		String path = "$HOME/Documents/Master/Master_1-S2/SRCS/TME/Teste/bin/";
 		URL [] ur = new URL[1]; 
 		System.out.println(1);
 		
