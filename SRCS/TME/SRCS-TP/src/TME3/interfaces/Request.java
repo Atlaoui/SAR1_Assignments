@@ -1,4 +1,4 @@
-	package TME3;
+	package TME3.interfaces;
 
 import java.net.Socket;
 

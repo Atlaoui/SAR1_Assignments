@@ -5,6 +5,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import TME3.interfaces.Request;
+
 public class Serveur {
 	private final int port;
 	private final Class< ? extends Request> c;
@@ -14,7 +16,7 @@ public class Serveur {
 		this.port=port;
 		this.c=c;
 	}
-
+	//lsof -i:4343 pour les soucis de port
 	public void listen() {
 		Socket s = null;
 		try {
