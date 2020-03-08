@@ -48,7 +48,7 @@ public class ProcessRequestGet implements Request {
 				out.flush();
 				return;
             }
-            Arrays.asList(req).stream().forEach(s-> System.out.println(s));
+           // Arrays.asList(req).stream().forEach(s-> System.out.println(s));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
