@@ -2,8 +2,9 @@
 node cellule(req_in, token_in, override_in, grant_in: bool) returns ( ack_out,token_out, override_out, grant_out: bool)
 var w, t :bool;
 let 
-    t = 0 -> pre token_in;  
-    w = 0-> pre req_in and (t or w);
+    t = 0 -> pre token_in;
+    --l'erreur était la il manquer la paranthése 
+    w = 0-> pre (req_in and (t or w));
 
     override_out = override_in or (w and t) ;
     grant_out = not req_in and grant_in;
@@ -22,7 +23,7 @@ let
 
     (ack_out2,tk_out2, ovr_out2, gr_out2) = cellule(req_in2,tk_out1, ovr_out1, gr_out3);
     
-    (ack_out3,tk_out3, ovr_out3, gr_out3) = cellule(req_in3,tk_out2, ovr_out2, not ovr_out3);
+    (ack_out3,tk_out3, ovr_out3, gr_out3) = cellule(req_in3,tk_out2, ovr_out2, (not ovr_out3));
 tel
 
 --Exercice 2.1  Indéterminisme
