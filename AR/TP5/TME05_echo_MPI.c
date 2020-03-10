@@ -2,8 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAGINIT    0
+#define TAGINIT 0
+/******************************************************************************/
+#define TAGDOWN 1
+#define TAGUP 2
+#define TAGECHO 3
+/******************************************************************************/
 #define NB_SITE 6
+
+int initiateur  =1;
 
 void simulateur(void) {
    int i;
@@ -23,6 +30,52 @@ void simulateur(void) {
       MPI_Send(voisins[i], nb_voisins[i], MPI_INT, i, TAGINIT, MPI_COMM_WORLD);    
       MPI_Send(&min_local[i], 1, MPI_INT, i, TAGINIT, MPI_COMM_WORLD); 
    }
+}
+/******************************Ajout Perso*************************************/
+int min(int a, int b) {return (a<b?a:b);}
+
+void calcul_min(int rang){
+    //initialisation
+    MPI_Status status;
+    int i,nb_voisins,min_local;
+    MPI_Recv(&nb_voisins, 1, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
+    int voisins[nb_voisins];
+    MPI_Recv(&voisins, nb_voisins, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
+    MPI_Recv(&min_local, 1, MPI_INT, 0, TAGINIT, MPI_COMM_WORLD, &status);
+   
+   //Si initiateur (le 1er papa aussi)
+   int min_node;
+   if(rang==initiateur){
+      printf("%d: est le noeud init avec min = %d \n",rang,min_local);
+      for(i=0;(i<nb_voisins && voisins[i]!=-1);i++)
+         MPI_Send(&min_node,1,MPI_INT,voisins[i],TAGDOWN,MPI_COMM_WORLD);
+      
+       printf("%d: va envoyer sont min au petit \n",rang);
+      for(i=0;i<nb_voisins;i++){
+         MPI_Recv(&min_node, 1, MPI_INT, MPI_ANY_SOURCE,TAGUP, MPI_COMM_WORLD, &status);
+         min_local=min(min_local,min_node);
+      }
+   }else{
+      int father = -1;
+      MPI_Recv(&min_node,1,MPI_INT,MPI_ANY_SOURCE,TAGDOWN,MPI_COMM_WORLD,&status);
+      //recuperation du Father id
+      father=status.MPI_SOURCE;
+      printf("%d: a pour father %d  et a un min = %d \n",rang,father,min_local);
+      for(i=0;(i<nb_voisins && voisins[i]!=-1);i++)
+         if(voisins[i]!=father)
+            MPI_Send(&min_node,1,MPI_INT,voisins[i],TAGDOWN,MPI_COMM_WORLD);
+      
+      //ont calcule le min
+      printf("%d:va calculer sont min\n",rang);
+      for(i=0;i<nb_voisins-1;i++){
+         MPI_Recv(&min_node, 1, MPI_INT, MPI_ANY_SOURCE,TAGUP, MPI_COMM_WORLD, &status);
+         min_local=min(min_local,min_node);
+          printf("%d:a recuperer le min\n",min_node);
+      }
+      //ont renvois la rep au papa
+      MPI_Send(&min_local,1,MPI_INT,father,TAGUP,MPI_COMM_WORLD);    
+   }
+   printf("%d: est a la fin de sont exec  avec min = %d \n",rang,min_local);
 }
 
 /******************************************************************************/

@@ -3,7 +3,7 @@ node cellule(req_in, token_in, override_in, grant_in: bool) returns ( ack_out,to
 var w, t :bool;
 let 
     t = 0 -> pre token_in;
-    --l'erreur était la il manquer la paranthése 
+    --l'erreur était la il manquer la paranthése
     w = 0-> pre (req_in and (t or w));
 
     override_out = override_in or (w and t) ;
