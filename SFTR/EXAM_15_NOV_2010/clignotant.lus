@@ -1,0 +1,28 @@
+node cde_clignot(reset : bool; up, down : bool) returns(left, right : bool);
+let
+    left=false -> not reset and (up or pre left);
+    right=false -> not reset and (down or pre right);
+    assert(not (up and down));
+    --assert((not up and not down));
+tel;   
+
+
+node cde_clignot_cor(reset : bool; up, down : bool) returns(left, right : bool);
+var
+state : int;
+let
+    state = 0 -> if reset then 0
+              else if (up and (pre(state) < 1)) then (pre(state) +1)
+               else if (down and (pre(state) > -1)) then (pre(state) -1)
+                else pre(state);
+    left = (state = 1);
+    right = (state = -1);
+    --assert(not (up and down));
+    assert (not (left and right));
+tel;
+
+node volant(theta : int; debut,fin,g_d : bool) returns (desactive : bool);
+let
+   
+tel;
+

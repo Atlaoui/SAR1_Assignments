@@ -25,8 +25,7 @@ public class Serveur {
 			
 			while(true) {
 				s=ecoute.accept();
-				inst_c.execute(s);
-				
+				inst_c.execute(s);	
 			}
 		} catch (SecurityException | NoSuchMethodException | InvocationTargetException  |InstantiationException 
 				|IllegalArgumentException | IllegalAccessException |IOException e) {

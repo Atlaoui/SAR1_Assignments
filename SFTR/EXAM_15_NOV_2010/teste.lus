@@ -1,0 +1,7 @@
+node EA1(a,b : bool) returns (s1,s2 : bool);
+var x : bool;
+let
+    s1 = a and b;
+    x = current (a when b);
+    s2 = x and pre b;
+tel
