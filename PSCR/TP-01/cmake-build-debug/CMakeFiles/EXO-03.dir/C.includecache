@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/TP-01/EXO-01/version.h
+
+/home/adrien/CLionProjects/TP-01/EXO-03/commit.h
+../EXO-01/version.h
+/home/adrien/CLionProjects/TP-01/EXO-01/version.h
+
+/home/adrien/CLionProjects/TP-01/EXO-03/history.h
+commit.h
+/home/adrien/CLionProjects/TP-01/EXO-03/commit.h
+
+/home/adrien/CLionProjects/TP-01/EXO-03/testHistory.c
+stdlib.h
+-
+stdio.h
+-
+history.h
+/home/adrien/CLionProjects/TP-01/EXO-03/history.h
+

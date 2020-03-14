@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/ExamsRev.dir/ExamJanv2019/main.cpp.o  -o ExamsRev 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/EXO-02.dir/EXO-02/testOffset.c.o CMakeFiles/EXO-02.dir/EXO-01/version.c.o CMakeFiles/EXO-02.dir/EXO-03/commit.c.o CMakeFiles/EXO-02.dir/EXO-03/history.c.o  -o EXO-02 

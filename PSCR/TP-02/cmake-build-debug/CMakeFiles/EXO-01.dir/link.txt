@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/EXO-01.dir/EXO-05/comment.c.o CMakeFiles/EXO-01.dir/EXO-01/version.c.o CMakeFiles/EXO-01.dir/EXO-01/commit.c.o CMakeFiles/EXO-01.dir/EXO-01/history.c.o CMakeFiles/EXO-01.dir/EXO-01/testHistory.c.o  -o EXO-01 

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/SharedData.h
+vector
+-
+
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/main.cpp
+string
+-
+SharedData.h
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/SharedData.h
+thread
+-
+iostream
+-
+zconf.h
+-
+mutex
+-
+
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/rwlock.h
+
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/rwlock_sem.cpp
+rwlock.h
+/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/rwlock.h
+semaphore.h
+-
+

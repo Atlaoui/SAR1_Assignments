@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PR.dir/main.cpp.o CMakeFiles/PR.dir/WordCountPair.cpp.o CMakeFiles/PR.dir/WordCountV.cpp.o CMakeFiles/PR.dir/HashMap.cpp.o  -o PR 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/ltime.dir/ExamJuin2019/Exo2/ltime.cpp.o  -o ltime 

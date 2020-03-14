@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ExamsRev"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Baboon_crossing">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Baboon_crossing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Baboon_crossing"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Baboon_crossing/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Baboon_crossing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Baboon_crossing/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ltime">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ltime" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ltime"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ltime/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ltime" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ltime/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExamJuin2019">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ExamJuin2019" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ExamJuin2019"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExamJuin2019/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ExamJuin2019" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ExamJuin2019/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Sign">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Sign" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Sign"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Sign/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Sign" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Sign/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExamJanv2019">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ExamJanv2019" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ExamJanv2019"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExamJanv2019/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/ExamJanv2019" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 ExamJanv2019/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mainSleep">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/mainSleep" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 mainSleep"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mainSleep/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/mainSleep" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 mainSleep/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Exo3">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Exo3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Exo3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Exo3/fast">
+				<Option output="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Exo3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrien/CLionProjects/ExamsRev/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 Exo3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adrien/CLionProjects/ExamsRev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/Baboon_crossing/Baboon.h">
+			<Option target="Baboon_crossing"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/Baboon_crossing/Corde.h">
+			<Option target="Baboon_crossing"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/Baboon_crossing/main.cpp">
+			<Option target="Baboon_crossing"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJanv2019/IValue.h">
+			<Option target="ExamJanv2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJanv2019/TicketBarrier.h">
+			<Option target="ExamJanv2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJanv2019/main.cpp">
+			<Option target="ExamJanv2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/SharedData.h">
+			<Option target="ExamJuin2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/main.cpp">
+			<Option target="ExamJuin2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/rwlock.h">
+			<Option target="ExamJuin2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo1/rwlock_sem.cpp">
+			<Option target="ExamJuin2019"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo2/ltime.cpp">
+			<Option target="ltime"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/ExamJuin2019/Exo3/shared.cpp">
+			<Option target="Exo3"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/Sign/main.cpp">
+			<Option target="Sign"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/Test/mainSleep.cpp">
+			<Option target="mainSleep"/>
+		</Unit>
+		<Unit filename="/home/adrien/CLionProjects/ExamsRev/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

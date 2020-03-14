@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/Petite_C++_noel/PereNoel.cpp
+zconf.h
+-
+iostream
+-
+PereNoel.h
+/home/adrien/CLionProjects/Petite_C++_noel/PereNoel.h
+
+/home/adrien/CLionProjects/Petite_C++_noel/PereNoel.h
+mutex
+-
+condition_variable
+-
+job.h
+/home/adrien/CLionProjects/Petite_C++_noel/job.h
+Struct/barrier.h
+/home/adrien/CLionProjects/Petite_C++_noel/Struct/barrier.h
+
+/home/adrien/CLionProjects/Petite_C++_noel/Struct/barrier.h
+mutex
+-
+condition_variable
+-
+
+/home/adrien/CLionProjects/Petite_C++_noel/job.h
+

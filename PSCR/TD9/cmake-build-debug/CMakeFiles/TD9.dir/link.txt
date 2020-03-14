@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TD9.dir/main.cpp.o  -o TD9 

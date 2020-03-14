@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ExamsRev" targetName="mainSleep" />
+      <config projectName="ExamsRev" targetName="Sign" />
+      <config projectName="ExamsRev" targetName="ExamJanv2019" />
+      <config projectName="ExamsRev" targetName="ltime" />
+      <config projectName="ExamsRev" targetName="ExamJuin2019" />
+      <config projectName="ExamsRev" targetName="Baboon_crossing" />
+      <config projectName="ExamsRev" targetName="Exo3" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7ac206d-38dc-44d6-8788-fd56aaabbafd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1VNeN36fh7MofFTWrQ9Vfuwd5YZ" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Petite_C++_noel" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ExamJuin2019/Exo1" />
+      <recent name="$PROJECT_DIR$/ExamJanv2019" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.Sign">
+    <configuration name="Baboon_crossing" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="Baboon_crossing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="Baboon_crossing">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExamJanv2019" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="ExamJanv2019" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="ExamJanv2019">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExamJuin2019" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="ExamJuin2019" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="ExamJuin2019">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exo3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="Exo3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="Exo3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sign" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="Sign" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="Sign">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ltime" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="ltime" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="ltime">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mainSleep" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ExamsRev" TARGET_NAME="mainSleep" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ExamsRev" RUN_TARGET_NAME="mainSleep">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Baboon_crossing" />
+      <item itemvalue="CMake Application.ExamJanv2019" />
+      <item itemvalue="CMake Application.ExamJuin2019" />
+      <item itemvalue="CMake Application.Exo3" />
+      <item itemvalue="CMake Application.ltime" />
+      <item itemvalue="CMake Application.mainSleep" />
+      <item itemvalue="CMake Application.Sign" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7ac206d-38dc-44d6-8788-fd56aaabbafd" name="Default Changelist" comment="" />
+      <created>1577097938271</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577097938271</updated>
+      <workItem from="1577097946015" duration="141000" />
+      <workItem from="1577098150278" duration="125000" />
+      <workItem from="1577098372654" duration="10150000" />
+      <workItem from="1577396896807" duration="1835000" />
+      <workItem from="1577436188791" duration="11101000" />
+      <workItem from="1577535786786" duration="33000" />
+      <workItem from="1577535894193" duration="293000" />
+      <workItem from="1577550876611" duration="368000" />
+      <workItem from="1577718680017" duration="743000" />
+      <workItem from="1578258452742" duration="5239000" />
+      <workItem from="1578481242942" duration="4050000" />
+      <workItem from="1578671727055" duration="485000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

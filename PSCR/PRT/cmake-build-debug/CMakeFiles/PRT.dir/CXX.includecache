@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/PRT/Compte.h
+vector
+-
+thread
+-
+mutex
+-
+
+/home/adrien/CLionProjects/PRT/main.cpp
+iostream
+-
+thread
+-
+time.h
+-
+stdlib.h
+-
+Compte.h
+/home/adrien/CLionProjects/PRT/Compte.h
+chrono
+-
+unistd.h
+-
+transferts.cpp
+/home/adrien/CLionProjects/PRT/transferts.cpp
+
+/home/adrien/CLionProjects/PRT/transferts.cpp
+Compte.h
+/home/adrien/CLionProjects/PRT/Compte.h
+iostream
+-
+

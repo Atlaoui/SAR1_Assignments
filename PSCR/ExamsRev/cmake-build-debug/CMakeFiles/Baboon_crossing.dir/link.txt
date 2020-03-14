@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/Baboon_crossing.dir/Baboon_crossing/main.cpp.o  -o Baboon_crossing 

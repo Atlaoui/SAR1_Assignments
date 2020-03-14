@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/TD7/Semaphore.cpp
+fcntl.h
+-
+sys/stat.h
+-
+semaphore.h
+-
+sys/wait.h
+-
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+iostream
+-
+
+/home/adrien/CLionProjects/TD7/main.cpp
+iostream
+-
+unistd.h
+-
+stdio.h
+-
+sys/wait.h
+-
+libnet.h
+-
+

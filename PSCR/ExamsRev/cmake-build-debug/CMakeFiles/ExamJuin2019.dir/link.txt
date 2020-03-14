@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/ExamJuin2019.dir/ExamJuin2019/Exo1/main.cpp.o CMakeFiles/ExamJuin2019.dir/ExamJuin2019/Exo1/rwlock_sem.cpp.o  -o ExamJuin2019 

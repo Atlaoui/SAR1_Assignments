@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/Exo3.dir/ExamJuin2019/Exo3/shared.cpp.o  -o Exo3 

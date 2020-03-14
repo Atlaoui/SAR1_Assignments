@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/Sign.dir/Sign/main.cpp.o  -o Sign 

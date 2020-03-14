@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -g   CMakeFiles/TME6-master.dir/src/fork_exo.cpp.o CMakeFiles/TME6-master.dir/src/rsleep.cpp.o CMakeFiles/TME6-master.dir/src/VadorvsLuke.cpp.o CMakeFiles/TME6-master.dir/src/teste_wait.cpp.o  -o TME6-master 

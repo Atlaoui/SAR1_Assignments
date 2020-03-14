@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -g   CMakeFiles/PRT.dir/main.cpp.o CMakeFiles/PRT.dir/Compte.cpp.o CMakeFiles/PRT.dir/transferts.cpp.o  -o PRT 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++17 -pthread -lrt -g   CMakeFiles/mainSleep.dir/Test/mainSleep.cpp.o  -o mainSleep 

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/tme6-master/src/VadorvsLuke.cpp
+iostream
+-
+unistd.h
+-
+csignal
+-
+rsleep.h
+/home/adrien/CLionProjects/tme6-master/src/rsleep.h
+
+/home/adrien/CLionProjects/tme6-master/src/rsleep.h
+
+/home/adrien/CLionProjects/tme6-master/src/teste_wait.cpp
+zconf.h
+-
+iostream
+-
+rsleep.h
+/home/adrien/CLionProjects/tme6-master/src/rsleep.h
+

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/PR/HashMap.cpp
+HashMap.h
+/home/adrien/CLionProjects/PR/HashMap.h
+
+/home/adrien/CLionProjects/PR/HashMap.h
+vector
+-
+forward_list
+-
+algorithm
+-
+iostream
+-
+iterator
+-
+
+/home/adrien/CLionProjects/PR/main.cpp
+iostream
+-
+fstream
+-
+regex
+-
+chrono
+-
+HashMap.h
+/home/adrien/CLionProjects/PR/HashMap.h
+

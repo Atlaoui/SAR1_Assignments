@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/Restaurant/Client/Client.cpp
+Client.h
+/home/adrien/CLionProjects/Restaurant/Client/Client.h
+
+/home/adrien/CLionProjects/Restaurant/Client/Client.h
+GroupClient.h
+/home/adrien/CLionProjects/Restaurant/Client/GroupClient.h
+
+/home/adrien/CLionProjects/Restaurant/Client/GroupClient.cpp
+GroupClient.h
+/home/adrien/CLionProjects/Restaurant/Client/GroupClient.h
+
+/home/adrien/CLionProjects/Restaurant/Client/GroupClient.h
+iostream
+-
+vector
+-
+thread
+-
+../Restaurant.h
+/home/adrien/CLionProjects/Restaurant/Restaurant.h
+Client.h
+/home/adrien/CLionProjects/Restaurant/Client/Client.h
+
+/home/adrien/CLionProjects/Restaurant/Restaurant.cpp
+Restaurant.h
+/home/adrien/CLionProjects/Restaurant/Restaurant.h
+
+/home/adrien/CLionProjects/Restaurant/Restaurant.h
+mutex
+-
+
+/home/adrien/CLionProjects/Restaurant/main.cpp
+iostream
+-
+

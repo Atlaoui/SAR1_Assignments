@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/CLionProjects/tme5-BlablaY-master/TD6/fork1.cpp
+iostream
+-
+unistd.h
+-
+sys/wait.h
+-
+
+/home/adrien/CLionProjects/tme5-BlablaY-master/TD6/signaux.cpp
+csignal
+-
+iostream
+-
+iostream
+-
+unistd.h
+-
+sys/wait.h
+-
+
