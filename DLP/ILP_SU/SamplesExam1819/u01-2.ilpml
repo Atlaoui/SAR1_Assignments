@@ -1,0 +1,8 @@
+class Point2D extends Point {
+var y;
+method m1 (t)
+self.y + super_with_args(super);
+}
+
+let pc = new Point2D(4, 5) in
+	1 + pc.m1(2)
