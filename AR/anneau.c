@@ -6,6 +6,9 @@
 
 #define TAGINIT 0
 #define NB_DEMANDE_SC 3
+
+int Jeton;
+
 int main (int argc, char* argv[]) {
    int nb_proc,rang;
    MPI_Init(&argc, &argv);
@@ -15,7 +18,7 @@ int main (int argc, char* argv[]) {
       printf("Nombre de processus incorrect !\n");
       MPI_Finalize();
       exit(2);
-   }  
+   }
    MPI_Comm_rank(MPI_COMM_WORLD, &rang);
 
    MPI_Finalize();
