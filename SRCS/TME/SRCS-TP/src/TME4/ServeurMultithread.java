@@ -12,7 +12,7 @@ import TME4.Interfaces.Service;
 import TME4.annotation.EtatGlobal;
 import TME4.annotation.SansEtat;
 
-public class ServeurMultiThread {
+public class ServeurMultithread {
 
 	private final int port;
 	private ServerSocket ecoute;
@@ -20,7 +20,7 @@ public class ServeurMultiThread {
 	private final Class< ? extends Service> c;
 	private Service avecEtat;
 	private ExecutorService pool;
-	public ServeurMultiThread(int port , Class< ? extends Service> c) {
+	public ServeurMultithread(int port , Class< ? extends Service> c) {
 		this.port=port;
 		this.c=c;
 		MAX_SIZE = 100;
@@ -35,7 +35,7 @@ public class ServeurMultiThread {
 		}
 	}
 	
-	public ServeurMultiThread(int port , Class< ? extends Service> c, int size) {
+	public ServeurMultithread(int port , Class< ? extends Service> c, int size) {
 		this.port=port;
 		this.c=c;
 		MAX_SIZE = size;
@@ -73,7 +73,6 @@ public class ServeurMultiThread {
 				pool.shutdown();
 
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

@@ -1,0 +1,5 @@
+EXO1
+Q1) le processus avec l'ID le plus élever.
+Q1-bis) il sait qu'il a ganger l'éelection lorsque sont jeton lui revien.
+EXO2
+Q1) ce changement induit le traitement séparé des message de réveille et de demande d'élection

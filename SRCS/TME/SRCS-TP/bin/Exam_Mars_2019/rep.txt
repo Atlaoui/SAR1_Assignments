@@ -1,0 +1,34 @@
+//exo1
+Q1)codage d'une information sous la forme d'une suite d'informations plus petites
+
+Q2)
+-avantage la charge de travaille est réduite sur le serveur
+-Déploiement et maintenance compliqués
+
+http://monge.univ-mlv.fr/~dr/XPOSE2008/Client%20lourd,%20client%20l%C3%A9ger,%20client%20riche/avantagesEtLimites.html
+
+Q3)un mutex réentrant (aussi appelé mutex récursif) est une exclusion mutuelle,
+ un mécanisme de verrouillage récursif, qui peut être bloqué plusieurs fois par le même processus
+ ont java les verrous sont réentrant de base
+ 
+Q4)proute
+
+Q5)le code client  générer ??
+
+Q6)proute
+
+Q7)
+1-B doit implanter Serializable
+2-Sauvgarder le contenure de B et l'instancier apres déserializaion ont fesant un writeUTF et writeBoolean
+
+Q8)Proute
+
+//exo2
+//Q1) avec etat
+//Q2) try catch ?
+
+//exo3
+//Q1) Recall
+//Q1,2) proute
+Q2)
+Protocole

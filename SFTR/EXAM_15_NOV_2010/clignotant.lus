@@ -26,3 +26,16 @@ let
    
 tel;
 
+
+node volant_cor(theta : int; debut,fin,g_d : bool) returns (desactive : bool);
+var alpha : int;
+acquisition : bool;
+let
+    acquisition = false ->if (debut and not pre debut) then 1
+                        else if pre(acquisition) and not fin then 1
+                        else if (fin and not pre fin) then 0
+                        else pre(acquisition);
+    alpha = theta -> if not acquisition then 0 else pre(alpha) + theta;
+    desactive = false -> (acquisition) and ((g_d and alpha > 20 and theta < 0) 
+                        or (not g_d and alpha < 0 and alpha < -20 and theta > 0));
+tel;

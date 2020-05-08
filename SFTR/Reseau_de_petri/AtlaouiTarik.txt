@@ -1,0 +1,42 @@
+Q1-Il y a un souci de coérance car le processus B ne contrôle pas avec qui il fait l'échange et du coup un processus peut donner sa couleur plusieurs fois.
+
+Q2-il faudrais une place suplémentaire au débus qui possed deux jeuton de la meme couleur et qui serons nécessaire pour passer et un est nécessaire pour passer la transition d'aprés ainsi ont a que deux par deux process qui ce suive ont réinjecterer le 
+jeton a sortie du réseau
+
+Q3-Il faudrait ordonner les priorités de réveille de sorte que le 1er réveillé soit le 1er à être réveillé s'il y a un notify (je ne sais pas exprimer ça ont réseau de pétri)
+
+Q4-les moniteurs ont java ne peuve pas imposer ce genre d'ordre du coup pour l'implémenter ont java il faudrait que l'utilisateur force l'ordre car le langage ne le permet pas.
+
+Q5-
+La solution étant d'imposer l'ordre dans la prise des couleurs ainsi le second processus est garantie d'avoir la 1er valeur poser dans la liste cependant l'exécution pose un problème d'interblocage avant modification.
+Il serait préférable d'utiliser des sémaphores ou des lock à fin d'avoir un maximum de deux add dans la liste. 
+
+public class Server{
+	private boolean FirstCall = true;
+	private boolean MustWait = false;
+	private ConcurrentLinkedQueue<Color> listColor = new ConcurrentLinkedQueue<>();
+	public synchronized Color Cooperation(IdCameleon x, Color C){
+		Color result;
+		if (FirstCall){
+			listColor.add(C);
+			FirstCall = false;
+			while ( !FirstCall ){
+				try{wait();} catch(InterruptedException e){}
+			}
+			MustWait = false;
+			result = listColor.peek();
+			notifyAll();
+		}
+		else{
+			result = listColor.peek();
+			listColor.add(C);
+			FirstCall = true;
+			notifyAll();
+		}
+		return result;
+	}
+}
+
+Q5-bis)
+Pour ce qui est du code C il faudrait utiliser une Queue.
+

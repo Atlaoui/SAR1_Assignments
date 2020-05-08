@@ -13,10 +13,11 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import TME4.ServeurMultiThread;
+import TME4.ServeurMultithread;
 import TME4.Interfaces.Service;
 import TME4.annotation.EtatGlobal;
 import TME4.annotation.SansEtat;
+
 
 
 public class TestServeurMultiThread {
@@ -62,7 +63,7 @@ public class TestServeurMultiThread {
 	
 	
 	public void stress(Class<? extends Service> cl_service, int nb_connexions) throws InterruptedException, IOException {
-		Thread thread_serveur = new Thread(()->	new ServeurMultiThread(port, cl_service).listen());
+		Thread thread_serveur = new Thread(()->	new ServeurMultithread(port, cl_service).listen());
 		thread_serveur.start();
 		Thread.sleep(200);
 		for(int i=0;i < nb_connexions ; i++) {
@@ -103,7 +104,7 @@ public class TestServeurMultiThread {
 	public void testSansAnnotation() throws UnknownHostException, IOException, InterruptedException {
 		Thread thread_serveur = new Thread( ()-> { 
 			try{ 
-				new ServeurMultiThread(port, ServiceSansAnnotation.class).listen() ;
+				new ServeurMultithread(port, ServiceSansAnnotation.class).listen() ;
 				passage=false;
 			}catch(IllegalStateException e) {
 				passage=true;

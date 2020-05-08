@@ -19,12 +19,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import TME4.ServeurMultiThread;
-import TME4.Interfaces.Calculatrice.ResDiv;
+import TME4.ServeurMultithread;
 import TME4.exception.MyProtocolException;
 import TME4.exception.VoidResponse;
 import TME4.exo2.AnnuaireService;
 import TME4.exo2.CalculatriceService;
+import TME4.Interfaces.Calculatrice.ResDiv;
+
 public class TestService {
 
 	public static int portannuaire=4234;
@@ -36,8 +37,8 @@ public class TestService {
 	@Before
 	public void setUp() throws Exception {
 		
-		annuaire =new Thread( () -> new ServeurMultiThread(portannuaire, AnnuaireService.class).listen());
-		calculette =new Thread( () -> new ServeurMultiThread(portcalculette, CalculatriceService.class).listen());
+		annuaire =new Thread( () -> new ServeurMultithread(portannuaire, AnnuaireService.class).listen());
+		calculette =new Thread( () -> new ServeurMultithread(portcalculette, CalculatriceService.class).listen());
 
 		annuaire.start();
 		calculette.start();
@@ -125,9 +126,7 @@ public class TestService {
 					oos.writeInt(4);
 					oos.writeInt(3);
 					oos.flush();
-					System.out.println("ok");
 					Object ret = ois.readObject();
-					System.out.println("ok");
 					assertTrue(ret instanceof ResDiv);
 					ResDiv result = (ResDiv) ret;
 					assertEquals(1, result.getQuotient());

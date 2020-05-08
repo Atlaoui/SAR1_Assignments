@@ -1,0 +1,1 @@
+/usr/bin/cc  -pthread -g   CMakeFiles/Main.dir/server.c.o CMakeFiles/Main.dir/simulation.c.o  -o Main 

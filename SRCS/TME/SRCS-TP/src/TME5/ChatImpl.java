@@ -34,12 +34,12 @@ public class ChatImpl extends ChatImplBase{
 
 	@Override
 	public void listChatter(Empty request, StreamObserver<StringValue> responseObserver) {
-		responseObserver.onNext(StringValue.(hm.keySet()));
+		//	responseObserver.onNext(StringValue.(hm.keySet()));
 	}
 
 	@Override
 	public void unsubscribe(StringValue request, StreamObserver<Empty> responseObserver) {
-		
+		hm.remove(request.toString());
 	}
 	
 	

@@ -1,22 +1,21 @@
 package TME4.Teste;
 
 
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import TME4.ServeurMultiThread;
-import TME4.AnnuaireAppelDistant;
-import TME4.AnnuaireProxy;
+import TME4.ServeurMultithread;
 import TME4.Interfaces.Annuaire;
 import TME4.Interfaces.Calculatrice;
 import TME4.Interfaces.Calculatrice.ResDiv;
-import TME4.exo2.CalculatriceService;
+import TME4.AnnuaireAppelDistant;
+import TME4.AnnuaireProxy;
 import TME4.CalculatriceAppelDistant;
-import TME4.CalculatriceProxy;;
+import TME4.CalculatriceProxy;
+
 
 public class TestAppelDistant {
 
@@ -29,8 +28,8 @@ public class TestAppelDistant {
 	
 	@Before
 	public void setUp() throws Exception {
-		annuaire =new Thread( () -> new ServeurMultiThread(portannuaire, AnnuaireAppelDistant.class).listen());
-		calculette =new Thread( () -> new ServeurMultiThread(portcalculette, CalculatriceAppelDistant.class).listen());
+		annuaire =new Thread( () -> new ServeurMultithread(portannuaire, AnnuaireAppelDistant.class).listen());
+		calculette =new Thread( () -> new ServeurMultithread(portcalculette, CalculatriceAppelDistant.class).listen());
 
 		annuaire.start();
 		calculette.start();

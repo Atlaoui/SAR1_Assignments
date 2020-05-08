@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrien/SAR1_Assignments/SFTR/Reseau_de_petri/C/MutationCamelelonPB/filetypes.h
+
+/home/adrien/SAR1_Assignments/SFTR/Reseau_de_petri/C/MutationCamelelonPB/server.c
+semaphore.h
+-
+filetypes.h
+/home/adrien/SAR1_Assignments/SFTR/Reseau_de_petri/C/MutationCamelelonPB/filetypes.h
+
