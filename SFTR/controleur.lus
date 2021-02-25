@@ -1,92 +1,19 @@
---https://github.com/Arxwel/LustreLang
-node Feux(TD,TI,CP : bool) returns (v,c,p : bool);
-var CPon : bool;
+
+node N1(a : bool) returns (x,y : bool);
 let
-CPon = CP -> if CP and not (pre v) then (not pre CPon) else pre CPon;
-v = TD -> ((not pre v) and (not pre c) and (not pre p ) and TD)
-            or (((pre c) or (pre p)) and TI)
-            or ((pre v) and ((not TD) and (not TI)));
-c = false -> ((pre v) and TD and (not CPon))
-              or ((pre c) and ((not TD) and (not TI) and (not CPon)))
-              or ((pre p) and (not CPon))
-              or ((pre c and TD));
-p = false -> ((pre p) and ((not TD) and (not TI) and CPon))
-            --and (not pre p and TD)
-              or ((pre c) and CPon)
-              or((pre v) and TD and CPon);
-assert not(CP and TI);
-assert not(CP and TD);
-assert not(TI and TD);
-tel
+x = 0 -> pre (x xor y) or (pre (not x and not y) and not a);
+y = 0 -> (a and pre (not x and not y)) or ((not a) and (pre y and not x)) ;
+tel;
 
-node ETENDUE( TD, TI, CP, AB, LP : bool) returns (V, C , P, ANTIBR , LONGPORT : bool);
-var AB_ok, LP_ok: bool;
+node P(x,y:bool) returns (a : bool);
+var x1,y2 :bool;
 let
+  x1=0-> pre x;
+  y1 = 0 -> pre y;
+  a = true -> if((pre x1 )== 0 and (pre y1) ==1  and y == 1) then true else false;
+tel;
 
-(V ,C , P) = Feux( TD, TI, CP);
-AB_ok = AB -> if AB then not pre AB_ok else pre AB_ok;
-LP_ok = LP -> if LP then not pre LP_ok else pre LP_ok;
-ANTIBR = false -> (AB_ok and pre C);
-LONGPORT = false ->(LP_ok and pre P);
-assert not(CP and TI);
-assert not(CP and TD);
-assert not(TI and TD);
-assert not(CP or not TD);
-tel
-
-
-node CONTROLEUR( TD, TI, CP : bool) returns( V, C , P :bool);
-
+node P2(x,y:bool) returns (a : bool);
 let
-V = TD -> (not pre C and not pre V and not pre P and TD)
-          or (pre C and TI)
-          or (pre P and TI);
-C = false -> (pre V and TD)
-          or (pre P and CP)
-          or (not pre V and TD);
-P = false -> (pre C and CP);
-
---Le conducteur ne peut pas simultanément tourner et tirer la manette.
-assert not(CP and TI);
-assert not(CP and TD);
-assert not(TI and TD);
-tel
-
-node Feux_Etendu(TD,TI,CP,AB,LP :bool) returns (v,c,p,anti,longport : bool);
-let
-(v,c,p) =  Feux( TD, TI, CP);
-anti =false -> if AB and pre c then not pre anti else pre anti;
---AB and pre c or pre anti;
-longport = false -> if LP and pre p then not pre longport else pre longport;
---LP and pre p or pre longport;
-tel
-
-
-
-
-
-node on_off(TD : bool) returns (on :bool);
-var cpt : int;
-let
-  cpt = 0 -> if TD then ((pre cpt +1) mod 2) else pre cpt;
-  on = false -> if cpt =0 then true else false;
-tel
-
-node on_off_logique(TD :bool) returns (on :bool);
-let
-  on = TD -> if TD then not pre on else pre on;
-tel
-
-node switch (orig, on, off : bool) returns (state : bool);
-let
-  state = orig ->( if on then true else if off then false else  pre  state );
-tel
-
---node controleur (TD ,TI ,CP : bool) returns (v,ph,code :bool);
---var CPon : bool;
---let
---CPon = CP -> if CP then (not pre CPon) else pre CPon;
---  v = TD -> if (not pre v);
---  code=CP and code;
---  ph =false -> switch (code,code,(pre v and v and false ->  not pre code));
---tel
+   a =P(N1(x,y));
+tel;

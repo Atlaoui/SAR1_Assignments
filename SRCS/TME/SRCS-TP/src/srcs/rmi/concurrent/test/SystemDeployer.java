@@ -43,7 +43,7 @@ class SystemDeployer implements Remote{
 		registry.unbind("variableIntegerClassical");
 		registry.unbind("variableIntegerReliable");
 		UnicastRemoteObject.unexportObject(registry, true);
-		new  ProcessBuilder("killall", "-q",  "rmiregistry").start();
+		new  Proces	sBuilder("killall", "-q",  "rmiregistry").start();
 		Thread.sleep(500);
 	}
 }

@@ -20,11 +20,11 @@ ILP_Object ilp__foo(ILP_Closure ilp_useless
 ,
     ILP_Object x1) {
 { 
-  ILP_Object ilptmp1364; 
-  ILP_Object ilptmp1365; 
-ilptmp1364 = ILP_Integer2ILP(2); 
-ilptmp1365 = x1; 
-return ILP_Times(ilptmp1364, ilptmp1365);
+  ILP_Object ilptmp1358; 
+  ILP_Object ilptmp1359; 
+ilptmp1358 = ILP_Integer2ILP(2); 
+ilptmp1359 = x1; 
+return ILP_Times(ilptmp1358, ilptmp1359);
 } 
 }
 struct ILP_Closure foo_closure_object = { 
@@ -38,15 +38,15 @@ ILP_Object ilp__bar(ILP_Closure ilp_useless
 ,
     ILP_Object y2) {
 { 
-  ILP_Object ilptmp1366; 
-  ILP_Object ilptmp1367; 
-ilptmp1366 = ILP_Integer2ILP(3); 
+  ILP_Object ilptmp1360; 
+  ILP_Object ilptmp1361; 
+ilptmp1360 = ILP_Integer2ILP(3); 
 { 
-  ILP_Object ilptmp1368; 
-ilptmp1368 = y2; 
-ilptmp1367 = ilp__foo(NULL , ilptmp1368);
+  ILP_Object ilptmp1362; 
+ilptmp1362 = y2; 
+ilptmp1361 = ilp__foo(NULL , ilptmp1362);
 }
-return ILP_Plus(ilptmp1366, ilptmp1367);
+return ILP_Plus(ilptmp1360, ilptmp1361);
 } 
 }
 struct ILP_Closure bar_closure_object = { 
@@ -63,9 +63,9 @@ struct ILP_Closure bar_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp1369; 
-ilptmp1369 = ILP_Integer2ILP(556); 
-return ilp__bar(NULL , ilptmp1369);
+  ILP_Object ilptmp1363; 
+ilptmp1363 = ILP_Integer2ILP(556); 
+return ilp__bar(NULL , ilptmp1363);
 }
 
 } 
