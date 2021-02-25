@@ -9,9 +9,6 @@
 /* Global functions */ 
 
 
-/* Classes */ 
-
-
 ILP_Object ilp_program () 
 { 
 return ILP_TRUE; 

@@ -9,15 +9,12 @@
 /* Global functions */ 
 
 
-/* Classes */ 
-
-
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp2658; 
-ilptmp2658 = ILP_FALSE; 
-  if ( ILP_isEquivalentToTrue(ilptmp2658 ) ) {
+  ILP_Object ilptmp475; 
+ilptmp475 = ILP_FALSE; 
+  if ( ILP_isEquivalentToTrue(ilptmp475 ) ) {
 return ILP_Integer2ILP(1); 
 
   } else {

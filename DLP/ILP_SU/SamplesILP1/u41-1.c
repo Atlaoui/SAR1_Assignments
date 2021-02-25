@@ -10,21 +10,18 @@ ILP_Object print;
 /* Global functions */ 
 
 
-/* Classes */ 
-
-
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp2776; 
+  ILP_Object ilptmp593; 
 { 
-  ILP_Object ilptmp2777; 
-  ILP_Object ilptmp2778; 
-ilptmp2777 = ILP_Integer2ILP(20); 
-ilptmp2778 = ILP_Integer2ILP(1); 
-ilptmp2776 = ILP_Plus(ilptmp2777, ilptmp2778);
+  ILP_Object ilptmp594; 
+  ILP_Object ilptmp595; 
+ilptmp594 = ILP_Integer2ILP(20); 
+ilptmp595 = ILP_Integer2ILP(1); 
+ilptmp593 = ILP_Plus(ilptmp594, ilptmp595);
 } 
-return ILP_print(ilptmp2776);
+return ILP_print(ilptmp593);
 }
 
 } 
